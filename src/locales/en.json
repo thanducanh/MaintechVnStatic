@@ -1,0 +1,531 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "products": "Products",
+        "news": "News",
+        "contact": "Contact"
+    },
+    "news": {
+        "latest_badge": "LATEST UPDATES",
+        "view_all": "VIEW ALL",
+        "quick_view": "Quick view"
+    },
+    "hero": {
+        "title1": "Elevating Performance",
+        "title2": "Modern Industry",
+        "description": "MAINTECHVN - Your trusted partner in providing equipment, technical solutions, and maintenance services for industrial sectors in Vietnam and Southeast Asia.",
+        "explore": "CONTACT NOW",
+        "scroll": "Scroll"
+    },
+    "home": {
+        "highlights": {
+            "section_title": "WHY CHOOSE MAINTECHVN",
+            "section_headline_1": "TECHNICAL SOLUTIONS",
+            "section_headline_2": "INTERNATIONAL STANDARDS",
+            "section_desc": "We combine deep expertise with modern technology to bring sustainable value to your industrial infrastructure.",
+            "1": {
+                "title": "High Expertise",
+                "desc": "A team of engineers and experts with extensive practical experience."
+            },
+            "2": {
+                "title": "Absolute Safety",
+                "desc": "Strictly adhere to international safety standards in every project."
+            },
+            "3": {
+                "title": "Guaranteed Progress",
+                "desc": "Commitment to completing projects on time with optimal quality."
+            },
+            "4": {
+                "title": "Top Quality",
+                "desc": "Partner with world-renowned industrial equipment brands."
+            }
+        },
+        "cta": {
+            "badge": "Ready to partner",
+            "title": "Ready to upgrade your industrial infrastructure?",
+            "desc": "Maintech's engineering team is ready to consult and support you 24/7. Contact us now for a free quote.",
+            "contact_btn": "Contact for advice now",
+            "catalog_btn": "Download Capability Catalog",
+            "trust1": "Free Quote",
+            "trust2": "International Certified Engineers",
+            "trust3": "24/7 Support",
+            "trust4": "Genuine Warranty"
+        }
+    },
+    "mission": {
+        "section_title1": "Commitment from",
+        "section_title2": "MAINTECHVN",
+        "desc": "With a team of experienced engineers and a deep understanding of the industrial market, we take pride in delivering superior products and services that meet the most stringent international standards.",
+        "stats": {
+            "exp": "Years of experience",
+            "proj": "Completed projects",
+            "satisfied": "Satisfied clients",
+            "support": "Technical support"
+        },
+        "items": {
+            "1": {
+                "title": "Vision",
+                "desc": "To become the leading provider of comprehensive technical solutions for the industrial sector in Vietnam."
+            },
+            "2": {
+                "title": "Mission",
+                "desc": "To accompany customers in improving production efficiency through advanced technology and professional services."
+            },
+            "3": {
+                "title": "Core Values",
+                "desc": "Safety - Quality - Prestige - Creativity are the guiding principles for all MAINTECHVN activities."
+            }
+        }
+    },
+    "process": {
+        "section_title": "Professional Process",
+        "desc": "We follow international standard processes to bring absolute satisfaction and safety to our customers.",
+        "steps": {
+            "1": {
+                "title": "01. Survey & Consulting",
+                "desc": "Our engineering team directly surveys the status at the site to provide the most optimal solution."
+            },
+            "2": {
+                "title": "02. Technical Design",
+                "desc": "Build detailed technical drawings based on international industrial and safety standards."
+            },
+            "3": {
+                "title": "03. Construction & Installation",
+                "desc": "Professional installation process, ensuring progress and top construction quality."
+            },
+            "4": {
+                "title": "04. Inspection & Handover",
+                "desc": "Thorough inspection, trial operation, and handover with long-term warranty mode."
+            }
+        }
+    },
+    "solution_explorer": {
+        "search": "Search Solutions",
+        "desc": "Discover how Maintech helps your business achieve maximum efficiency through sophisticated technical solutions.",
+        "custom": "Need a bespoke solution?",
+        "quote_btn": "Get a quote now",
+        "items": {
+            "port": {
+                "title": "Port Solutions",
+                "features": [
+                    "RTG/STS Optimization",
+                    "Real-time monitoring system",
+                    "Predictive Maintenance"
+                ]
+            },
+            "fb": {
+                "title": "F&B Solutions",
+                "features": [
+                    "Microbiological standard lines",
+                    "Automatic packaging",
+                    "Digitized production reports"
+                ]
+            },
+            "lifting": {
+                "title": "Lifting Solutions",
+                "features": [
+                    "Tailor-made design",
+                    "Multi-layer safety system",
+                    "Remote control"
+                ]
+            }
+        }
+    },
+    "footer": {
+        "about": "Providing leading technical solutions and industrial equipment in Vietnam. Committed to absolute quality and safety.",
+        "links_title": "Links",
+        "links": {
+            "about": "About Us",
+            "services": "Services",
+            "sectors": "Sectors",
+            "news": "News & Events",
+            "careers": "Careers"
+        },
+        "services_title": "Services",
+        "services": {
+            "1": "Crane Maintenance",
+            "2": "F&B Line Installation",
+            "3": "Technical Supplies",
+            "4": "Automation Consulting",
+            "5": "24/7 Technical Service"
+        },
+        "contact_title": "Company",
+        "contact": {
+            "office": "Office:",
+            "office_val": "25V/5 Binh Hoa 22 St, Binh Hoa Ward, Thuan An City, Binh Duong Province, Vietnam.",
+            "factory": "Factory:",
+            "factory_val": "30/8 Street 38, Vinh Phu Ward, Thuan An City, Binh Duong Province, Vietnam.",
+            "phone": "Phone:",
+            "website": "Website:",
+            "tax_id": "Tax ID:",
+            "id_code": "Reg. ID:",
+            "representative": "Representative:",
+            "representative_val": "Mr. Nguyen Dinh Thanh – Director"
+        },
+        "copyright": "Maintech Vietnam. All rights reserved."
+    },
+    "categories": {
+        "THIET_KE_THI_CONG": "Design & Construction",
+        "BAO_TRI_SUA_CHUA": "Maintenance & Repair",
+        "THIET_BI_NGANH_CANG": "Port Equipment",
+        "THIET_BI_FB": "F&B Equipment",
+        "THIET_BI_NANG_HA": "Lifting Equipment",
+        "SẢN PHẨM": "Products",
+        "PHỤ TÙNG VẬT TƯ": "Spare Parts",
+        "LINH_KIEN": "Components",
+        "TIN_TUC": "News",
+        "DU_AN": "Projects",
+        "THIET_BI": "Equipment",
+        "PHU_TUNG": "Spare Parts",
+        "KHAC": "Others"
+    },
+    "services_data": {
+        "header": {
+            "portfolio": "Service Portfolio",
+            "title": "Industrial Equipment Installation & Maintenance",
+            "desc": "Maintech Vietnam Co., Ltd specializes in providing installation, maintenance, and construction services for industrial equipment, lifting systems, and mechanical workshops in Ho Chi Minh City and provinces nationwide. With a team of experienced engineers and professional deployment processes, Maintech is committed to providing safe, effective, and cost-optimized technical solutions for manufacturing enterprises and industrial plants.",
+            "view_all": "View all services",
+            "view_detail": "Details",
+            "back": "Back to category",
+            "detail_title": "Solution details"
+        },
+        "contact": {
+            "title": "Contact for advice",
+            "desc": "Our engineering team is always ready to answer questions and advise the most optimal solution for your business.",
+            "hotline": "24/7 Hotline",
+            "btn": "Submit a quote request"
+        },
+        "highlights": {
+            "h247": "24/7 Support",
+            "standard": "International Standard"
+        },
+        "drawer": {
+            "overview": "Service Overview",
+            "items_implemented": "Implemented items",
+            "consult_now": "Technical advice now",
+            "consult_desc": "To receive a detailed cost estimate and optimal construction plan for your project.",
+            "send_req": "Send request"
+        },
+        "modal": {
+            "title": "Our Services Catalog",
+            "learn_more": "Learn more",
+            "not_found": "Couldn't find the service you need?",
+            "custom_consult": "Contact for custom advice"
+        },
+        "items": {
+            "thiet-ke-cang": {
+                "title": "Port Equipment Design & Installation",
+                "desc": "Providing design, construction, and renovation services for port equipment systems such as cranes and container transportation systems.",
+                "fullContent": "We understand that in the port industry, every moment of downtime causes major economic damage. Therefore, Maintech's solutions always focus on two factors: Maximum performance and Absolute reliability. With a team of engineers deeply trained in STS and RTG crane systems, we confidently undertake the most complex projects from technical design to site installation.",
+                "features": [
+                    "Design and installation of STS and RTG crane systems",
+                    "Unscheduled and periodic maintenance to optimize operation",
+                    "Upgrade control systems for older generation equipment",
+                    "Test and load testing according to international maritime safety standards"
+                ]
+            },
+            "thiet-ke-f-b": {
+                "title": "F&B Equipment Design & Installation",
+                "desc": "Microbiological production lines, storage tanks, and automatic packaging solutions for the food and beverage industry.",
+                "fullContent": "Food safety is the top priority in the F&B industry. Maintech provides microbiological stainless steel piping systems, ASME standard tanks, and automation solutions that minimize human intervention in the production process. We consult and implement modern CIP (Clean-In-Place) systems that save water and chemicals while ensuring maximum sterility for the system.",
+                "features": [
+                    "High standard stainless steel tanks and piping systems",
+                    "Installation of automatic processing and packaging equipment",
+                    "Optimization of factory space and operational processes",
+                    "Digitization of reporting processes and quality management"
+                ]
+            },
+            "thiet-ke-nang-ha": {
+                "title": "Lifting Equipment Design & Installation",
+                "desc": "Design, manufacture, and installation of industrial lifting systems for workshops, warehouses, and construction sites.",
+                "fullContent": "Maintech provides tailor-made overhead cranes, gantry cranes, and freight elevators suitable for the structure and purpose of each workshop. All equipment is integrated with multi-layer safety systems, including load sensors, travel limits, and the most modern emergency braking systems.",
+                "features": [
+                    "Design of cranes, freight elevators, and conveyors",
+                    "Installation according to strict technical standards",
+                    "Provide genuine parts and fast support",
+                    "Periodic safety inspection and operation licensing"
+                ]
+            },
+            "bao-tri-cang": {
+                "title": "Port Equipment Maintenance & Repair",
+                "desc": "Professional maintenance for port crane systems, ensuring 24/7 continuous operation.",
+                "fullContent": "Our maintenance service includes periodic inspection of mechanical, electrical, and hydraulic systems of STS and RTG cranes. We commit to fast response times to minimize downtime at the port.",
+                "features": [
+                    "Periodic mechanical and electrical testing",
+                    "24/7 emergency repair on-site",
+                    "Replacement of hoisting cables and brake system inspection",
+                    "Upgrading with modern technology solutions"
+                ]
+            },
+            "bao-tri-f-b": {
+                "title": "F&B Equipment Maintenance & Repair",
+                "desc": "Maintenance service for food production systems, meeting strict hygiene standards.",
+                "fullContent": "Ensure the production line is always in top condition with periodic maintenance. We provide flexible solution packages suitable for the production schedule of the factory.",
+                "features": [
+                    "Maintenance of tanks and stainless steel piping",
+                    "Disinfection of production systems",
+                    "Replacement of genuine automation equipment",
+                    "Upgrading software to adjust processes"
+                ]
+            },
+            "bao-tri-nang-ha": {
+                "title": "Lifting Equipment Maintenance & Repair",
+                "desc": "Comprehensive maintenance solutions for industrial lifting systems.",
+                "fullContent": "Lifting systems need to be inspected regularly to ensure occupational safety. Maintech provides a full service from inspection to repair and replacement of components.",
+                "features": [
+                    "Periodic safety inspection and load testing",
+                    "Repair of bridge beams and brake systems",
+                    "Fast supply of replacement parts and supplies",
+                    "Modernization of crane control systems"
+                ]
+            },
+            "cung-cap-xay-dung": {
+                "title": "Construction Equipment Supply",
+                "desc": "Distributing high-quality construction machinery and materials.",
+                "fullContent": "We provide construction machinery and equipment from the world's leading brands, ensuring performance and durability in harsh environments.",
+                "features": [
+                    "Imported construction machinery",
+                    "100% genuine replacement parts",
+                    "Leasing of construction lifting equipment",
+                    "Consulting on equipment solutions for construction"
+                ]
+            }
+        }
+    },
+    "about_page": {
+        "hero": {
+            "title": "ABOUT MAINTECHVN",
+            "subtitle": "DEVELOPMENT JOURNEY & POSITIONING"
+        },
+        "intro": {
+            "title": "INTRODUCTION",
+            "content1": "Maintechvn specializes in designing, installing, and maintaining port equipment, industrial lifting systems, and F&B systems in Vietnam and Southeast Asia.",
+            "content2": "Established in 2020, Maintech Vietnam operates in the field of design, installation, and maintenance of industrial equipment, mechanical construction, and factory technical systems. We have participated in many projects in Ho Chi Minh City, Cambodia, Malaysia, and Southeast Asia.",
+            "content3": "With experience working in multi-national environments and collaborating with technical partners in Germany, we provide total solutions from survey, technical advice to post-handover maintenance.",
+            "solution_title": "Comprehensive Industrial Technical Solutions",
+            "legal_info": {
+                "title": "Clear Legal Information:",
+                "tax_id": "Tax Code: 3702888448",
+                "representative": "Legal Representative: Mr. Nguyen Dinh Thanh – Director",
+                "verified": "Full legal records 2024"
+            }
+        },
+        "vision": {
+            "title": "VISION",
+            "content": "To build Maintechvn into a leading brand in Vietnam and Southeast Asia in the field of providing technical solutions, installation, and maintenance of industrial equipment. We aim to bring distinctive values through professionalism, prestige, and constant updates of the world's most advanced technologies."
+        },
+        "mission": {
+            "title": "MISSION",
+            "content": "Constantly striving to provide optimal solutions for customers, contributing to improving operational efficiency and safety for port, industrial, and F&B equipment systems in Vietnam and internationally."
+        },
+        "core_values": {
+            "title": "CORE VALUES",
+            "items": [
+                {
+                    "title": "Professionalism",
+                    "desc": "The technical team is well-trained with standardized work manners."
+                },
+                {
+                    "title": "Quality",
+                    "desc": "Always providing solutions and equipment that meet international quality standards."
+                },
+                {
+                    "title": "Safety",
+                    "desc": "The top criterion in all survey, construction, and maintenance activities."
+                },
+                {
+                    "title": "Commitment",
+                    "desc": "Accompanying and supporting customers throughout the operation lifecycle of the product."
+                }
+            ]
+        },
+        "cta": {
+            "title": "Ready to upgrade your industrial infrastructure?",
+            "desc": "Contact Maintech experts for the most optimal solution for your business.",
+            "btn": "CONTACT NOW"
+        },
+        "stats": {
+            "years": "10+",
+            "projects": "500+",
+            "label_years": "YEARS OF EXPERIENCE",
+            "label_projects": "COMPLETED PROJECTS"
+        },
+        "badges": {
+            "iso": "ISO 9001:2015",
+            "kalmar": "Kalmar Certificate",
+            "gottwald": "Gottwald Certificate",
+            "vcci": "VCCI Member"
+        },
+        "clients": {
+            "title": "KEY PARTNERS"
+        },
+        "certificates": {
+            "title": "Core Competencies & International Technical Certificates",
+            "subtitle": "Proud to have a team of experts with international certificates from leading equipment brands such as Kalmar, Gottwald, and Hänel. Maintech VN is committed to providing design, assembly, and maintenance solutions for port equipment, F&B machinery, and lifting systems with optimal safety and performance.",
+            "categories": {
+                "port": "Port Equipment & Container Handling Certificates",
+                "fb": "Automation Systems & F&B Line Certificates",
+                "accessories": "Crane Accessories & Safety Systems Certificates",
+                "storage": "Industrial Storage Systems Certificates",
+                "safety": "Industrial Safety Certificates"
+            },
+            "items": {
+                "reach_stackers": {
+                    "title": "Technical Training Certificate for Reach Stackers",
+                    "desc": ""
+                },
+                "dce80_100": {
+                    "title": "Technical Training Certificate for Empty Container Handler - DCE80-100 Series",
+                    "desc": ""
+                },
+                "kalmar_troubleshoot": {
+                    "title": "Troubleshooting & Maintenance Certificate for Rubber Tyred Gantry Crane",
+                    "desc": "Electrical & Mechanical Course for E-One model"
+                },
+                "kalmar_rtg_vi": {
+                    "title": "Assembly, Operation and Maintenance Certificate for RTG",
+                    "desc": ""
+                },
+                "mhc_adv": {
+                    "title": "Advanced Training Certificate for Mobile Harbour Crane",
+                    "desc": "Including PLC, BUS hardware and programming"
+                },
+                "kalmar_adv": {
+                    "title": "Advanced Training Certificate for Kalmar Rubber Tyred Gantry Crane",
+                    "desc": ""
+                },
+                "kalmar_rtg": {
+                    "title": "Kalmar Certificate – RTG (Assembly, Commissioning & Maintenance)",
+                    "desc": ""
+                },
+                "kalmar_asia": {
+                    "title": "Kalmar Asia Certificate",
+                    "desc": "DRF 450-60S5K & DCE 80-45E"
+                },
+                "krones": {
+                    "title": "Krones Certificate",
+                    "desc": "Control Classic + Highspeed"
+                },
+                "spreader": {
+                    "title": "Spreader Maintenance Training Certificate",
+                    "desc": "PLC & SCS2 Systems"
+                },
+                "pat_kruger": {
+                    "title": "PAT-Krüger System Maintenance Training Certificate",
+                    "desc": "Specialized in safety systems (PSV3/1 - DS120) for lifting machinery"
+                },
+                "hanel": {
+                    "title": "Hänel Storage Systems Product & Service Training Certificate",
+                    "desc": "Specialized in Rotomat system installation"
+                },
+                "safety": {
+                    "title": "Online Safety Training Certificate (Sicherheitsbelehrung)",
+                    "desc": ""
+                }
+            }
+        }
+    },
+    "contact_page": {
+        "hero": {
+            "title": "CONTACT US",
+            "subtitle": "CONNECT WITH OUR EXPERTS FOR OPTIMAL SOLUTIONS"
+        },
+        "info": {
+            "title": "CONTACT INFORMATION",
+            "office": "Head Office",
+            "factory": "Factory",
+            "phone": "Support Phone",
+            "email": "Email Address",
+            "working_hours": "Working Hours",
+            "working_hours_val": "Mon - Sat: 08:00 AM - 05:00 PM",
+            "whatsapp": "Connect WhatsApp",
+            "telegram": "Connect Telegram",
+            "zalo": "Connect Zalo"
+        },
+        "form": {
+            "title": "SEND A REQUEST",
+            "name": "Full Name",
+            "email": "Your Email",
+            "phone": "Phone Number",
+            "service": "Service of Interest",
+            "message": "Your Message",
+            "submit": "SEND REQUEST"
+        }
+    },
+    "adminProducts": {
+        "title": "Products & Equipment",
+        "subtitle": "Manage F&B equipment, crane equipment, lifting equipment and supporting components.",
+        "actions": {
+            "create": "Create product"
+        },
+        "filters": {
+            "searchPlaceholder": "Quick search...",
+            "allCategories": "Category",
+            "allSubcategories": "Subcategory",
+            "allStatuses": "Status"
+        },
+        "table": {
+            "index": "No.",
+            "image": "Image",
+            "title": "Product name",
+            "category": "Category",
+            "subcategory": "Subcategory",
+            "supplier": "Brand",
+            "price": "Price",
+            "status": "Status",
+            "actions": "Actions",
+            "total": "Total",
+            "unit": "products created",
+            "rowsPerPage": "Rows per page:"
+        },
+        "menu": {
+            "view": "View details",
+            "edit": "Edit",
+            "delete": "Delete"
+        },
+        "empty": {
+            "title": "No products yet",
+            "subtitle": "Create your first product to display it on the website."
+        },
+        "categories": {
+            "THIET_BI_FB": "F&B Equipment",
+            "THIET_BI_NGANH_CANG": "Crane Equipment",
+            "THIET_BI_CAU": "Crane Equipment",
+            "THIET_BI_NANG_HA": "Lifting Equipment"
+        },
+        "subcategories": {
+            "BANG_TAI": "Conveyor",
+            "MAY_DONG_GOI": "Packaging machine",
+            "MAY_CHIET_ROT": "Filling machine",
+            "MAY_TRON": "Mixing machine",
+            "MAY_RUA_VE_SINH_CONG_NGHIEP": "Industrial washing/cleaning machine",
+            "VAN_BOM_DUONG_ONG": "Valve - pump - pipeline",
+            "LINH_KIEN_PHU_TUNG_FB": "F&B components/spare parts",
+            "CAU_TRUC": "Overhead crane",
+            "CONG_TRUC": "Gantry crane",
+            "CAU_QUAY": "Jib crane",
+            "PALANG": "Hoist",
+            "TOI_DIEN": "Electric winch",
+            "RAY_BANH_XE_MOC_CAU": "Rail / wheels / hooks",
+            "LINH_KIEN_PHU_TUNG_CAU": "Crane components/spare parts",
+            "XE_NANG": "Forklift",
+            "BAN_NANG": "Lifting table",
+            "THANG_NANG": "Lifting platform",
+            "DOCK_LEVELER": "Dock leveler",
+            "CON_DOI_KICH_THUY_LUC": "Hydraulic jack",
+            "XICH_CAP_SLING": "Chain / cable / sling",
+            "LINH_KIEN_PHU_TUNG_NANG_HA": "Lifting components/spare parts"
+        },
+        "status": {
+            "active": "Active",
+            "hidden": "Hidden",
+            "draft": "Draft"
+        },
+        "priceType": {
+            "contact": "Contact",
+            "hidden": "Hidden price"
+        }
+    }
+}

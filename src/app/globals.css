@@ -1,0 +1,189 @@
+/* 📍 File: src/app/globals.css */
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  
+  --popover: #FFFFFF;
+  --popover-foreground: #0F172A;
+  
+  --primary: oklch(0.45 0.18 25); /* Maintech Red #A91D1D */
+  --primary-foreground: #F8FAFC;
+  
+  --secondary: #F1F5F9;
+  --secondary-foreground: #0F172A;
+  
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  
+  --accent: #F1F5F9;
+  --accent-foreground: #0F172A;
+  
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #F8FAFC;
+  
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: oklch(0.45 0.18 25);
+  
+  --radius: 0.125rem;
+}
+
+.dark {
+  --background: #020817;
+  --foreground: #F8FAFC;
+  
+  --card: #0F172A;
+  --card-foreground: #F8FAFC;
+  
+  --popover: #0F172A;
+  --popover-foreground: #F8FAFC;
+  
+  --primary: oklch(0.45 0.18 25);
+  --primary-foreground: #F8FAFC;
+  
+  --secondary: #1E293B;
+  --secondary-foreground: #F8FAFC;
+  
+  --muted: #1E293B;
+  --muted-foreground: #CBD5E1;
+  
+  --accent: #1E293B;
+  --accent-foreground: #F8FAFC;
+  
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: #F8FAFC;
+  
+  --border: #1E293B;
+  --input: #0F172A;
+  --ring: #334155;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --font-sans: var(--font-inter), sans-serif;
+  --font-heading: var(--font-montserrat), sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* 🚀 REDUCE MOTION */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 🚀 Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Compact public top bar: keep both color blocks at the same 40px height. */
+.topbar-compact > div,
+.topbar-compact > div > div,
+.topbar-compact > div > div > div {
+  min-height: 40px !important;
+  height: 40px !important;
+}
+
+.topbar-compact svg {
+  width: 14px;
+  height: 14px;
+}
+
+.topbar-compact > div > div > div {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+/* History CMS order: main media, then background and overlay controls. */
+.history-cms-fields > label:nth-of-type(1),
+.history-cms-fields > label:nth-of-type(3) {
+  order: 1;
+}
+.history-cms-fields > label:nth-of-type(2) {
+  order: 2;
+}
+.history-cms-fields > label:nth-of-type(4) {
+  order: 3;
+}
+
+.history-media button {
+  z-index: 20;
+  pointer-events: auto;
+}
+
+/* Long contact text pauses for one minute, then moves gently back and forth. */
+@keyframes topbar-marquee {
+  0%, 50% { transform: translateX(0); }
+  66% { transform: translateX(calc(-100% + 280px)); }
+  82% { transform: translateX(calc(-100% + 280px)); }
+  98%, 100% { transform: translateX(0); }
+}
+
+.topbar-marquee {
+  animation: topbar-marquee 120s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topbar-marquee { animation: none; }
+}

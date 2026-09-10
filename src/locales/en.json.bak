@@ -1,0 +1,275 @@
+{
+    "nav": {
+        "about": "About Us",
+        "services": "Services",
+        "sectors": "Products",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title1": "Elevating Performance of",
+        "title2": "Modern Industry",
+        "description": "MAINTECHVN - A trusted partner in providing equipment, technical solutions, and maintenance services for key industries in Vietnam and Southeast Asia.",
+        "explore": "CONTACT NOW",
+        "scroll": "Scroll"
+    },
+    "home": {
+        "highlights": {
+            "1": {
+                "title": "High Expertise",
+                "desc": "A team of engineers and experts with extensive practical experience."
+            },
+            "2": {
+                "title": "Absolute Safety",
+                "desc": "Strict compliance with international safety standards in all projects."
+            },
+            "3": {
+                "title": "Guaranteed Schedule",
+                "desc": "Commitment to completing projects on time with optimal quality."
+            },
+            "4": {
+                "title": "Top Quality",
+                "desc": "Partner of reputable global industrial equipment brands."
+            }
+        },
+        "cta": {
+            "title": "Ready to upgrade your industrial infrastructure?",
+            "desc": "Contact the experts at Maintech to receive the most optimal solution consulting for your business.",
+            "contact_btn": "Contact for Consultation",
+            "catalog_btn": "Download Capacity Profile"
+        }
+    },
+    "mission": {
+        "section_title1": "Commitment from",
+        "section_title2": "Maintech Vietnam",
+        "desc": "With a team of experienced engineers and deep understanding of the industrial market, we proudly provide outstanding products and services, meeting the strictest international standards.",
+        "stats": {
+            "exp": "Years of Experience",
+            "proj": "Completed Projects"
+        },
+        "items": {
+            "1": {
+                "title": "Vision",
+                "desc": "To become a leading provider of comprehensive technical solutions for the industrial sector in Vietnam."
+            },
+            "2": {
+                "title": "Mission",
+                "desc": "Accompanying customers to improve production efficiency through advanced technology and professional services."
+            },
+            "3": {
+                "title": "Core Values",
+                "desc": "Safety - Quality - Prestige - Innovation is the guiding principle for all of MAINTECHVN's activities."
+            }
+        }
+    },
+    "process": {
+        "section_title": "Professional Process",
+        "desc": "We comply with international standard processes to bring absolute satisfaction and safety to our customers.",
+        "steps": {
+            "1": {
+                "title": "01. Survey & Consulting",
+                "desc": "Our team of engineers directly surveys the site to provide the most optimal solution."
+            },
+            "2": {
+                "title": "02. Technical Design",
+                "desc": "Build detailed technical drawings based on international industry and safety standards."
+            },
+            "3": {
+                "title": "03. Construction & Installation",
+                "desc": "Professional installation process, ensuring schedule and top construction quality."
+            },
+            "4": {
+                "title": "04. Inspection & Handover",
+                "desc": "Thorough testing, trial operation, and handover with a long-term warranty policy."
+            }
+        }
+    },
+    "solution_explorer": {
+        "search": "Search Solutions",
+        "desc": "Discover how Maintech helps your business achieve maximum performance through sophisticated technical solutions.",
+        "custom": "Need a custom solution?",
+        "quote_btn": "Get a quote now",
+        "items": {
+            "port": {
+                "title": "Seaport Solutions",
+                "features": [
+                    "RTG/STS Optimization",
+                    "Real-time surveillance system",
+                    "Predictive Maintenance"
+                ]
+            },
+            "fb": {
+                "title": "F&B Solutions",
+                "features": [
+                    "Microbiological standard line",
+                    "Automated packaging",
+                    "Digitizing production reports"
+                ]
+            },
+            "lifting": {
+                "title": "Lifting Solutions",
+                "features": [
+                    "Tailor-made design",
+                    "Multi-layer safety system",
+                    "Remote Control"
+                ]
+            }
+        }
+    },
+    "footer": {
+        "about": "Providing leading technical solutions and industrial equipment in Vietnam. Commitment to absolute quality and safety.",
+        "links_title": "Links",
+        "links": {
+            "about": "About Us",
+            "services": "Services",
+            "sectors": "Sectors",
+            "news": "News & Events",
+            "careers": "Careers"
+        },
+        "services_title": "Services",
+        "services": {
+            "1": "Crane system maintenance",
+            "2": "F&B line installation",
+            "3": "Technical material supply",
+            "4": "Automation solution consulting",
+            "5": "24/7 technical services"
+        },
+        "contact_title": "Company",
+        "contact": {
+            "office": "Office:",
+            "office_val": "25V/5 Binh Hoa 22 Street, Binh Hoa Ward, Thuan An City, Binh Duong Province, Vietnam.",
+            "factory": "Factory:",
+            "factory_val": "85/5 Vinh Phu 38A, Vinh Phu Ward, Thuan An City, Binh Duong Province, Vietnam.",
+            "phone": "Phone:",
+            "website": "Website:"
+        },
+        "copyright": "Maintech Vietnam. All rights reserved."
+    },
+    "services_data": {
+        "header": {
+            "title": "Industrial Equipment Installation & Maintenance",
+            "desc": "Maintech Vietnam Co., Ltd. specializes in providing installation, maintenance, and construction services for industrial equipment, lifting systems, and factory mechanical engineering in Ho Chi Minh City and provinces nationwide. With a team of experienced engineers and professional implementation processes, Maintech is committed to providing safe, effective, and cost-optimized technical solutions for manufacturing enterprises and industrial plants.",
+            "view_all": "View all services",
+            "view_detail": "Find out details",
+            "back": "Back to category",
+            "detail_title": "Solution Details"
+        },
+        "contact": {
+            "title": "Contact for Consultation",
+            "desc": "Maintech's team of engineers is always ready to answer your questions and provide the most optimal solution for your business.",
+            "hotline": "Hotline 24/7",
+            "btn": "Send a quote request"
+        },
+        "highlights": {
+            "h247": "24/7 Support",
+            "standard": "International Standard"
+        },
+        "drawer": {
+            "overview": "Service Overview",
+            "items_implemented": "Implemented Items",
+            "consult_now": "Technical Consultation Now",
+            "consult_desc": "To receive a detailed estimate and optimal construction plan for your project.",
+            "send_req": "Send Request"
+        },
+        "modal": {
+            "title": "Our Service Portfolio",
+            "learn_more": "Learn more in detail",
+            "not_found": "Can't find the service you need?",
+            "custom_consult": "Contact for custom consultation"
+        },
+        "items": {
+            "thiet-ke-cang": {
+                "title": "Port Equipment Installation & Design",
+                "desc": "Specializing in designing, constructing, and renovating equipment systems at seaports and inland ports such as cranes and container transport systems.",
+                "fullContent": "We understand that in the seaport industry, every minute of downtime causes great economic damage.\nTherefore, Maintech's solutions always focus on two factors: Maximum efficiency and Absolute reliability.\n\nWith a team of engineers deeply trained in STS gantry cranes and RTG tire cranes, we confidently take on the most complex projects from technical drawing design to on-site installation.",
+                "features": [
+                    "Design & construction of gantry crane (STS), tire crane (RTG) systems",
+                    "Unexpected & periodic maintenance to optimize operations",
+                    "Control system upgrade for old generation equipment",
+                    "Inspection and load testing according to international maritime safety standards"
+                ]
+            },
+            "thiet-ke-f-b": {
+                "title": "F&B Industry Equipment Design & Installation",
+                "desc": "Solutions for microbiological production lines, tanks, and automated packaging systems for the food and beverage industry.",
+                "fullContent": "Hygiene and safety are the top priorities in the F&B industry. Maintech provides microbiological stainless steel piping systems, ASME standard tanks, and automated solutions to minimize human intervention in the production process.\n\nWe advise and deploy modern CIP (Clean-In-Place) systems, saving water and chemicals while ensuring maximum sterility for the system.",
+                "features": [
+                    "Installation of high standard microbiological stainless steel piping systems",
+                    "Installation of automatic processing and packaging equipment",
+                    "Optimizing factory space and operating processes",
+                    "Digitizing the quality management & reporting process"
+                ]
+            },
+            "thiet-ke-nang-ha": {
+                "title": "Lifting Equipment Design & Installation",
+                "desc": "Design, manufacture, and installation of industrial lifting systems for factories, warehouses, and construction sites.",
+                "fullContent": "Maintech provides tailor-made overhead cranes, gantry cranes, and freight elevators suitable for the structure and purpose of each factory.\n\nEvery equipment is integrated with a multi-layer safety system, including load sensors, travel limits, and the most modern emergency braking system.",
+                "features": [
+                    "Design of cranes, freight elevators, and conveyors",
+                    "Installation according to strict technical standards",
+                    "Providing genuine spare parts and fast support",
+                    "Safety inspection and periodic operating license"
+                ]
+            },
+            "bao-tri-cang": {
+                "title": "Port Industry Equipment Maintenance & Repair",
+                "desc": "Professional maintenance services for your port crane system, ensuring continuous 24/7 operation.",
+                "fullContent": "Our maintenance service includes periodic inspections of mechanical, electrical, and hydraulic systems of STS and RTG cranes. We commit to a fast response time to minimize downtime at the port.",
+                "features": [
+                    "Periodic inspection of electromechanical systems",
+                    "24/7 emergency repair on-site",
+                    "Cable replacement and brake system inspection",
+                    "Upgrading to modern technology solutions"
+                ]
+            },
+            "bao-tri-f-b": {
+                "title": "F&B Industry Equipment Maintenance & Repair",
+                "desc": "Maintenance service for food production lines, meeting strict hygiene standards.",
+                "fullContent": "Ensure your production line is always in top condition with periodic maintenance. We provide flexible solution packages suitable for the factory's production schedule.",
+                "features": [
+                    "Maintenance of tanks and stainless steel pipes",
+                    "Industrial cleaning and disinfection of systems",
+                    "Replacement of genuine automation equipment",
+                    "Software upgrades adjusting the process"
+                ]
+            },
+            "bao-tri-nang-ha": {
+                "title": "Lifting Equipment Maintenance & Repair",
+                "desc": "Comprehensive maintenance solutions for industrial lifting systems.",
+                "fullContent": "Lifting systems need regular inspection to ensure occupational safety. Maintech provides a package from inspection to repairing and replacing components.",
+                "features": [
+                    "Safety checks and regular load tests",
+                    "Repairing bridge girders and brake systems",
+                    "Fast supply of replacement materials & parts",
+                    "Modernizing crane control systems"
+                ]
+            },
+            "cung-cap-xay-dung": {
+                "title": "Construction Equipment Supply",
+                "desc": "Distributing high-quality construction machinery and materials.",
+                "fullContent": "We provide all kinds of machinery and equipment for construction from the world's leading brands, ensuring performance and durability in harsh environments.",
+                "features": [
+                    "Imported construction machinery",
+                    "100% genuine replacement parts",
+                    "Rental of construction lifting equipment",
+                    "Consulting on construction equipment solutions"
+                ]
+            }
+        }
+    },
+    "about_page": {
+        "hero": {
+            "title": "About MAINTECHVN",
+            "subtitle": "Comprehensive technical solutions for industry"
+        },
+        "intro": {
+            "title": "Introduction",
+            "content1": "Maintechvn is a unit specializing in designing, installing and maintaining port equipment, industrial lifting systems and F&B systems in Vietnam and Southeast Asia.",
+            "content2": "We have participated in deploying services and providing equipment for projects in Vietnam, Cambodia, Malaysia and have cooperated with technical partners in Germany. Practical experience in multinational environments helps Maintechvn clearly understand requirements for technical standards, operational safety and construction progress according to each market.",
+            "content3": "Maintechvn provides overall solutions from survey, technical consultation, design, construction and installation to maintenance after handover, ensuring stable operation and long-term efficiency."
+        },
+        "stats": {
+            "years": "10+",
+            "projects": "500+"
+        }
+    }
+}

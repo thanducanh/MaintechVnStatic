@@ -1,0 +1,275 @@
+{
+    "nav": {
+        "about": "Về chúng tôi",
+        "services": "Dịch vụ",
+        "sectors": "Sản phẩm",
+        "contact": "Liên hệ"
+    },
+    "hero": {
+        "title1": "Nâng tầm hiệu suất",
+        "title2": "Công nghiệp Hiện đại",
+        "description": "MAINTECHVN - Đối tác tin cậy trong cung cấp thiết bị, giải pháp kỹ thuật và dịch vụ bảo trì cho các ngành công nghiệp tại Việt Nam và các khu vực Đông Nam Á.",
+        "explore": "LIÊN HỆ NGAY",
+        "scroll": "Cuộn"
+    },
+    "home": {
+        "highlights": {
+            "1": {
+                "title": "Chuyên môn cao",
+                "desc": "Đội ngũ kỹ sư và chuyên gia dày dặn kinh nghiệm thực tiễn."
+            },
+            "2": {
+                "title": "An toàn tuyệt đối",
+                "desc": "Tuân thủ nghiêm ngặt các tiêu chuẩn an toàn quốc tế trong mọi dự án."
+            },
+            "3": {
+                "title": "Tiến độ đảm bảo",
+                "desc": "Cam kết hoàn thành dự án đúng thời hạn với chất lượng tối ưu."
+            },
+            "4": {
+                "title": "Chất lượng hàng đầu",
+                "desc": "Đối tác của các thương hiệu thiết bị công nghiệp uy tín thế giới."
+            }
+        },
+        "cta": {
+            "title": "Bạn đã sẵn sàng nâng cấp hạ tầng công nghiệp?",
+            "desc": "Liên hệ với các chuyên gia của Maintech để nhận tư vấn giải pháp tối ưu nhất cho doanh nghiệp của bạn.",
+            "contact_btn": "Liên hệ tư vấn ngay",
+            "catalog_btn": "Tải Catalog năng lực"
+        }
+    },
+    "mission": {
+        "section_title1": "Cam kết từ",
+        "section_title2": "MAINTECHVN",
+        "desc": "Với đội ngũ kỹ sư giàu kinh nghiệm và sự am hiểu sâu sắc về thị trường công nghiệp, chúng tôi tự hào mang đến những sản phẩm và dịch vụ vượt trội, đáp ứng các tiêu chuẩn khắt khe nhất của quốc tế.",
+        "stats": {
+            "exp": "Năm kinh nghiệm",
+            "proj": "Dự án hoàn thành"
+        },
+        "items": {
+            "1": {
+                "title": "Tầm nhìn",
+                "desc": "Trở thành đơn vị hàng đầu cung cấp giải pháp kỹ thuật toàn diện cho ngành công nghiệp tại Việt Nam."
+            },
+            "2": {
+                "title": "Sứ mệnh",
+                "desc": "Đồng hành cùng khách hàng nâng cao hiệu quả sản xuất thông qua công nghệ tiên tiến và dịch vụ chuyên nghiệp."
+            },
+            "3": {
+                "title": "Giá trị cốt lõi",
+                "desc": "An toàn - Chất lượng - Uy tín - Sáng tạo là kim chỉ nam cho mọi hoạt động của MAINTECHVN."
+            }
+        }
+    },
+    "process": {
+        "section_title": "Quy trình chuyên nghiệp",
+        "desc": "Chúng tôi tuân thủ quy trình chuẩn quốc tế để mang lại sự hài lòng và an toàn tuyệt đối cho khách hàng.",
+        "steps": {
+            "1": {
+                "title": "01. Khảo sát & Tư vấn",
+                "desc": "Đội ngũ kỹ sư trực tiếp khảo sát hiện trạng tại công trình để đưa ra giải pháp tối ưu nhất."
+            },
+            "2": {
+                "title": "02. Thiết kế Kỹ thuật",
+                "desc": "Xây dựng bản vẽ kỹ thuật chi tiết dựa trên các tiêu chuẩn công nghiệp và an toàn quốc tế."
+            },
+            "3": {
+                "title": "03. Thi công & Lắp đặt",
+                "desc": "Quy trình lắp đặt chuyên nghiệp, đảm bảo đúng tiến độ và chất lượng thi công hàng đầu."
+            },
+            "4": {
+                "title": "04. Kiểm định & Bàn giao",
+                "desc": "Kiểm tra kỹ lưỡng, vận hành thử nghiệm và bàn giao kèm chế độ bảo hành dài hạn."
+            }
+        }
+    },
+    "solution_explorer": {
+        "search": "Tìm kiếm giải pháp",
+        "desc": "Khám phá cách Maintech giúp doanh nghiệp của bạn đạt được hiệu suất tối đa thông qua các giải pháp kỹ thuật tinh vi.",
+        "custom": "Bạn cần giải pháp riêng biệt?",
+        "quote_btn": "Nhận báo giá ngay",
+        "items": {
+            "port": {
+                "title": "Giải pháp Cảng Biển",
+                "features": [
+                    "Tối ưu hóa RTG/STS",
+                    "Hệ thống giám sát thời gian thực",
+                    "Bảo trì dự báo (Predictive)"
+                ]
+            },
+            "fb": {
+                "title": "Giải pháp F&B",
+                "features": [
+                    "Dây chuyền chuẩn vi sinh",
+                    "Tự động hóa đóng gói",
+                    "Số hóa báo cáo sản xuất"
+                ]
+            },
+            "lifting": {
+                "title": "Giải pháp Nâng Hạ",
+                "features": [
+                    "Thiết kế may đo theo nhà xưởng",
+                    "Hệ thống an toàn đa tầng",
+                    "Điều khiển từ xa"
+                ]
+            }
+        }
+    },
+    "footer": {
+        "about": "Cung cấp giải pháp kỹ thuật và thiết bị công nghiệp hàng đầu tại Việt Nam. Cam kết chất lượng và an toàn tuyệt đối.",
+        "links_title": "Liên kết",
+        "links": {
+            "about": "Về chúng tôi",
+            "services": "Dịch vụ",
+            "sectors": "Lĩnh vực",
+            "news": "Tin tức & Sự kiện",
+            "careers": "Tuyển dụng"
+        },
+        "services_title": "Dịch vụ",
+        "services": {
+            "1": "Bảo trì hệ thống cẩu",
+            "2": "Lắp đặt dây chuyền F&B",
+            "3": "Cung cấp vật tư kỹ thuật",
+            "4": "Tư vấn giải pháp tự động hóa",
+            "5": "Dịch vụ kỹ thuật 24/7"
+        },
+        "contact_title": "Công ty",
+        "contact": {
+            "office": "Văn phòng:",
+            "office_val": "25V/5 Đường Bình Hòa 22, Phường Bình Hòa, TP. Thuận An, Tỉnh Bình Dương, Việt Nam.",
+            "factory": "Xưởng:",
+            "factory_val": "85/5 Vĩnh Phú 38A, Phường Vĩnh Phú, TP. Thuận An, Tỉnh Bình Dương, Việt Nam.",
+            "phone": "Số điện thoại:",
+            "website": "Website:"
+        },
+        "copyright": "Maintech Việt Nam. All rights reserved."
+    },
+    "services_data": {
+        "header": {
+            "title": "Dịch Vụ Lắp Đặt & Bảo Trì Thiết Bị Công Nghiệp",
+            "desc": "Công ty TNHH Maintech Việt Nam chuyên cung cấp dịch vụ lắp đặt, bảo trì và thi công thiết bị công nghiệp, hệ thống nâng hạ và cơ khí nhà xưởng tại TP. Hồ Chí Minh và các tỉnh thành trên toàn quốc. Với đội ngũ kỹ sư giàu kinh nghiệm cùng quy trình triển khai chuyên nghiệp, Maintech cam kết mang đến giải pháp kỹ thuật an toàn, hiệu quả và tối ưu chi phí cho doanh nghiêp sản xuất và nhà máy công nghiệp.",
+            "view_all": "Xem tất cả dịch vụ",
+            "view_detail": "Tìm hiểu chi tiết",
+            "back": "Quay lại danh mục",
+            "detail_title": "Chi tiết giải pháp"
+        },
+        "contact": {
+            "title": "Liên hệ tư vấn",
+            "desc": "Đội ngũ kỹ sư của Maintech luôn sẵn sàng giải đáp các thắc mắc và tư vấn giải pháp tối ưu nhất cho doanh nghiệp của bạn.",
+            "hotline": "Hotline 24/7",
+            "btn": "Gửi yêu cầu báo giá"
+        },
+        "highlights": {
+            "h247": "Hỗ trợ 24/7",
+            "standard": "Chuẩn Quốc Tế"
+        },
+        "drawer": {
+            "overview": "Tổng quan dịch vụ",
+            "items_implemented": "Các hạng mục thực hiện",
+            "consult_now": "Tư vấn kỹ thuật ngay",
+            "consult_desc": "Để nhận được bảng dự toán chi tiết và phương án thi công tối ưu cho dự án của bạn.",
+            "send_req": "Gửi yêu cầu"
+        },
+        "modal": {
+            "title": "Danh Mục Dịch Vụ Của Chúng Tôi",
+            "learn_more": "Tìm hiểu chi tiết",
+            "not_found": "Bạn không tìm thấy dịch vụ mình cần?",
+            "custom_consult": "Liên hệ tư vấn tùy chỉnh"
+        },
+        "items": {
+            "thiet-ke-cang": {
+                "title": "Thiết Kế Lắp Đặt Thiết Bị Cảng",
+                "desc": "Chuyên cung cấp dịch vụ thiết kế, thi công và cải tạo các hệ thống thiết bị tại cảng biển và cảng nội địa như cẩu trục, hệ thống vận chuyển container.",
+                "fullContent": "Chúng tôi hiểu rằng trong ngành cảng biển, mỗi giây phút dừng máy đều gây ra thiệt hại kinh tế lớn.\nVì vậy, các giải pháp của Maintech luôn tập trung vào hai yếu tố: Hiệu suất tối đa và Độ tin cậy tuyệt đối.\n\nVới đội ngũ kỹ sư được đào tạo chuyên sâu về các hệ thống cẩu giàn STS và cẩu bánh lốp RTG, chúng tôi tự tin đảm nhận các dự án phức tạp nhất từ khâu thiết kế bản vẽ kỹ thuật đến thi công lắp đặt tại hiện trường.",
+                "features": [
+                    "Thiết kế thi công hệ thống cẩu giàn (STS), cẩu bánh lốp (RTG)",
+                    "Bảo trì đột xuất và định kỳ tối ưu hóa vận hành",
+                    "Nâng cấp hệ thống điều khiển cho thiết bị thế hệ cũ",
+                    "Kiểm tra và thử tải theo tiêu chuẩn an toàn hàng hải quốc tế"
+                ]
+            },
+            "thiet-ke-f-b": {
+                "title": "Thiết Kế Lắp Đặt Thiết Bị Ngành F&B",
+                "desc": "Giải pháp dây chuyền sản xuất vi sinh, bồn chứa và hệ thống đóng gói tự động cho ngành thực phẩm và đồ uống.",
+                "fullContent": "An toàn vệ sinh là ưu tiên hàng đầu trong ngành F&B. Maintech cung cấp các hệ thống đường ống inox vi sinh, bồn chứa đạt chuẩn ASME và các giải pháp tự động hóa giúp giảm thiểu sự can thiệp của con người vào quy trình sản xuất.\n\nChúng tôi tư vấn và triển khai các hệ thống CIP (Clean-In-Place) hiện đại, giúp tiết kiệm nước và hóa chất trong khi vẫn đảm bảo độ sạch khuẩn tối đa cho hệ thống.",
+                "features": [
+                    "Hệ thống bồn chứa, đường ống inox vi sinh tiêu chuẩn cao",
+                    "Lắp đặt thiết bị chế biến, đóng gói tự động",
+                    "Tối ưu không gian nhà máy và quy trình vận hành",
+                    "Số hóa quy trình báo cáo và quản lý chất lượng"
+                ]
+            },
+            "thiet-ke-nang-ha": {
+                "title": "Thiết Kế Lắp Đặt Thiết Bị Nâng Hạ",
+                "desc": "Thiết kế, chế tạo và lắp đặt các hệ thống nâng hạ công nghiệp cho nhà xưởng, kho bãi và công trình xây dựng.",
+                "fullContent": "Maintech cung cấp các loại cầu trục, cổng trục và thang máy nâng hàng được thiết kế riêng biệt (Tailor-made) phù hợp với cấu trúc và mục đích sử dụng của từng nhà xưởng.\n\nMọi thiết bị đều được tích hợp hệ thống an toàn đa tầng, bao gồm cảm biến tải trọng, giới hạn hành trình và hệ thống phanh khẩn cấp hiện đại nhất.",
+                "features": [
+                    "Thiết kế cần cẩu, thang máy nâng hàng và băng tải",
+                    "Lắp đặt theo tiêu chuẩn kỹ thuật nghiêm ngặt",
+                    "Cung cấp phụ tùng chính hãng và hỗ trợ nhanh",
+                    "Kiểm định an toàn và cấp phép vận hành định kỳ"
+                ]
+            },
+            "bao-tri-cang": {
+                "title": "Bảo Trì Sửa Chữa Thiết Bị Ngành Cảng",
+                "desc": "Dịch vụ bảo dưỡng chuyên nghiệp cho hệ thống cẩu cảng, đảm bảo hoạt động liên tục 24/7.",
+                "fullContent": "Dịch vụ bảo trì của chúng tôi bao gồm kiểm tra định kỳ hệ thống cơ khí, điện và thủy lực của các loại cẩu STS, RTG. Chúng tôi cam kết thời gian đáp ứng nhanh chóng để giảm thiểu tối đa thời gian dừng máy tại cảng.",
+                "features": [
+                    "Kiểm định hệ thống cơ điện định kỳ",
+                    "Sửa chữa khẩn cấp 24/7 tại hiện trường",
+                    "Thay thế cáp tải và kiểm tra hệ thống phanh",
+                    "Nâng cấp giải pháp công nghệ hiện đại"
+                ]
+            },
+            "bao-tri-f-b": {
+                "title": "Bảo Trì Sửa Chữa Thiết Bị Ngành F&B",
+                "desc": "Dịch vụ bảo trì hệ thống sản xuất thực phẩm, đáp ứng các tiêu chuẩn vệ sinh nghiêm ngặt.",
+                "fullContent": "Đảm bảo dây chuyền sản xuất luôn trong tình trạng tốt nhất với dịch vụ bảo trì định kỳ. Chúng tôi cung cấp các gói giải pháp linh hoạt phù hợp với lịch trình sản xuất của nhà máy.",
+                "features": [
+                    "Bảo trì bồn chứa và đường ống inox",
+                    "Vệ sinh khử khuẩn hệ thống sản xuất",
+                    "Thay thế thiết bị tự động hóa chính hãng",
+                    "Nâng cấp phần mềm điều chỉnh quy trình"
+                ]
+            },
+            "bao-tri-nang-ha": {
+                "title": "Bảo Trì Sửa Chữa Thiết Bị Nâng Hạ",
+                "desc": "Giải pháp bảo trì toàn diện cho các hệ thống nâng hạ công nghiệp.",
+                "fullContent": "Hệ thống nâng hạ cần được kiểm tra thường xuyên để đảm bảo an toàn lao động. Maintech cung cấp dịch vụ trọn gói từ kiểm định đến sửa chữa thay thế linh kiện.",
+                "features": [
+                    "Kiểm tra an toàn và thử tải định kỳ",
+                    "Sửa chữa dầm cầu và hệ thống phanh",
+                    "Cung cấp vật tư phụ tùng thay thế nhanh",
+                    "Hiện đại hóa hệ thống điều khiển cầu trục"
+                ]
+            },
+            "cung-cap-xay-dung": {
+                "title": "Cung Cấp Thiết Bị Ngành Xây Dựng",
+                "desc": "Phân phối các thiết bị máy móc công trình và vật tư xây dựng chất lượng cao.",
+                "fullContent": "Chúng tôi cung cấp các loại máy móc thiết bị phục vụ thi công xây dựng từ các thương hiệu hàng đầu thế giới, đảm bảo hiệu suất và độ bền trong môi trường khắc nghiệt.",
+                "features": [
+                    "Máy móc công trình nhập khẩu",
+                    "Phụ tùng thay thế chính hãng 100%",
+                    "Cho thuê thiết bị nâng hạ công trình",
+                    "Tư vấn giải pháp thiết bị công trình"
+                ]
+            }
+        }
+    },
+    "about_page": {
+        "hero": {
+            "title": "Về MAINTECHVN",
+            "subtitle": "Giải pháp kỹ thuật toàn diện cho ngành công nghiệp"
+        },
+        "intro": {
+            "title": "Giới thiệu",
+            "content1": "Maintechvn là đơn vị chuyên thiết kế, lắp đặt và bảo trì thiết bị cảng, hệ thống nâng hạ công nghiệp và hệ thống F&B tại Việt Nam và khu vực Đông Nam Á.",
+            "content2": "Chúng tôi đã tham gia triển khai dịch vụ và cung cấp thiết bị cho các dự án tại Việt Nam, Campuchia, Malaysia và từng hợp tác với đối tác kỹ thuật tại Đức. Kinh nghiệm làm việc trong môi trường đa quốc gia giúp Maintechvn hiểu rõ yêu cầu về tiêu chuẩn kỹ thuật, an toàn vận hành và tiến độ thi công theo từng thị trường.",
+            "content3": "Maintechvn cung cấp giải pháp tổng thể từ khảo sát, tư vấn kỹ thuật, thiết kế, thi công lắp đặt đến bảo trì sau bàn giao, đảm bảo hệ thống vận hành ổn định và hiệu quả lâu dài."
+        },
+        "stats": {
+            "years": "10+",
+            "projects": "500+"
+        }
+    }
+}
