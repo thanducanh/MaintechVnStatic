@@ -1,0 +1,20 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/admin/login/page": "app/admin/login/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/admin/trash/page": "app/admin/trash/page.js",
+  "/api/cron/reminders/route": "app/api/cron/reminders/route.js",
+  "/contact/page": "app/contact/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/news/[slug]/page": "app/news/[slug]/page.js",
+  "/news/page": "app/news/page.js",
+  "/page": "app/page.js",
+  "/products/[slug]/page": "app/products/[slug]/page.js",
+  "/products/page": "app/products/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/services/[slug]/page": "app/services/[slug]/page.js",
+  "/services/page": "app/services/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js"
+}

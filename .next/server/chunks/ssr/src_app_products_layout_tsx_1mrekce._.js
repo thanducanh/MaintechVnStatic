@@ -1,0 +1,3 @@
+module.exports=[62629,a=>{"use strict";var b=a.i(7997);a.s(["default",0,function({children:a}){return(0,b.jsx)(b.Fragment,{children:a})},"metadata",0,{title:"Sản Phẩm & Thiết Bị",description:"Khám phá danh mục sản phẩm và thiết bị kỹ thuật công nghiệp chính hãng từ Maintech Vietnam. Cung cấp cẩu trục, phụ tùng nâng hạ đạt chuẩn quốc tế.",openGraph:{title:"Sản Phẩm & Thiết Bị | Maintech Vietnam",description:"Thiết bị kỹ thuật công nghiệp chính hãng — cẩu trục, nâng hạ, phụ tùng đạt chuẩn quốc tế."}}])},95110,function(a){a.n(a.i(62629))}];
+
+//# sourceMappingURL=src_app_products_layout_tsx_1mrekce._.js.map

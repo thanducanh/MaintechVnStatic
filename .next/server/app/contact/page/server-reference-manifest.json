@@ -1,0 +1,16 @@
+{
+  "node": {
+    "403d2ac8ed1013cfed921256ad60179c02bbc99cf4": {
+      "workers": {
+        "app/contact/page": {
+          "moduleId": 1021,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "submitContactForm",
+      "filename": "src/actions/contact.ts"
+    }
+  },
+  "edge": {}
+}

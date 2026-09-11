@@ -1,0 +1,3 @@
+module.exports=[37064,a=>{"use strict";var b=a.i(7997);a.s(["default",0,function({children:a}){return(0,b.jsx)(b.Fragment,{children:a})},"metadata",0,{title:"Liên Hệ",description:"Liên hệ với Maintech Vietnam để nhận tư vấn và báo giá thiết bị kỹ thuật công nghiệp. Đội ngũ kỹ sư của chúng tôi sẵn sàng hỗ trợ bạn 24/7.",openGraph:{title:"Liên Hệ | Maintech Vietnam",description:"Đội ngũ kỹ sư Maintech sẵn sàng tư vấn và hỗ trợ bạn 24/7 — miễn phí, không ràng buộc."}}])},70944,function(a){a.n(a.i(37064))}];
+
+//# sourceMappingURL=src_app_contact_layout_tsx_1t-fho7._.js.map

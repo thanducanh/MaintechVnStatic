@@ -1,0 +1,3 @@
+module.exports=[44222,a=>{"use strict";var b=a.i(7997);a.s(["default",0,function({children:a}){return(0,b.jsx)(b.Fragment,{children:a})},"metadata",0,{title:"Dịch Vụ & Giải Pháp",description:"Maintech Vietnam cung cấp dịch vụ bảo trì, sửa chữa thiết bị công nghiệp, hệ thống nâng hạ và giải pháp kỹ thuật toàn diện cho doanh nghiệp.",openGraph:{title:"Dịch Vụ & Giải Pháp | Maintech Vietnam",description:"Cung cấp giải pháp kỹ thuật công nghiệp toàn diện — từ thiết kế, lắp đặt đến bảo trì định kỳ."}}])},98526,function(a){a.n(a.i(44222))}];
+
+//# sourceMappingURL=src_app_services_layout_tsx_0ybzkqf._.js.map
