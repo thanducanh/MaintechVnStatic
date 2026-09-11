@@ -1,4 +1,4 @@
-﻿// ðŸ“ File: src/app/contact/page.tsx
+// ðŸ“ File: src/app/contact/page.tsx
 import React from "react";
 import { siteConfig } from "@/data/site-content";
 import ContactPublicContent from "@/components/ContactPublicContent";
@@ -16,16 +16,16 @@ export default function ContactPage() {
     // Default Fallbacks
     const defaultData = {
         hero: {
-            title: { vi: "LiÃªn há»‡ chÃºng tÃ´i", en: "Contact us" },
-      subtitle: { vi: "", en: "" },
+            title: { vi: "Liên hệ chúng tôi", en: "Contact us" },
+            subtitle: { vi: "", en: "" },
             backgroundImage: "",
             overlayOpacity: 0.6
         },
         pageContent: {
-            subtitle: { vi: "Káº¾T Ná»I", en: "CONNECT" },
-            title: { vi: "ChÃºng tÃ´i luÃ´n sáºµn sÃ ng láº¯ng nghe", en: "We are always ready to listen" },
+            subtitle: { vi: "KẾT NỐI", en: "CONNECT" },
+            title: { vi: "Chúng tôi luôn sẵn sàng lắng nghe", en: "We are always ready to listen" },
             description: { 
-                vi: "Báº¥t ká»ƒ yÃªu cáº§u vá» báº£o trÃ¬, phá»¥ tÃ¹ng hay tÆ° váº¥n giáº£i phÃ¡p má»›i, Ä‘á»™i ngÅ© ká»¹ sÆ° cá»§a Maintech luÃ´n sáºµn sÃ ng Ä‘á»“ng hÃ nh cÃ¹ng doanh nghiá»‡p báº¡n.", 
+                vi: "Bất kể yêu cầu về bảo trì, phụ tùng hay tư vấn giải pháp mới, đội ngũ kỹ sư của Maintech luôn sẵn sàng đồng hành cùng doanh nghiệp bạn.", 
                 en: "Regardless of your request for maintenance, spare parts or advice on new solutions, Maintech's engineering team is always ready to accompany your business." 
             }
         },
@@ -35,17 +35,17 @@ export default function ContactPage() {
             hotline: "0918 458 399",
             email: "maintechvietnam@gmail.com",
             responseTime: {
-                vi: "Cam káº¿t pháº£n há»“i ká»¹ thuáº­t trong vÃ²ng 24 giá» lÃ m viá»‡c.",
+                vi: "Cam kết phản hồi kỹ thuật trong vòng 24 giờ làm việc.",
                 en: "We commit to responding within 24 business hours."
             }
         },
         addresses: {
             list: [
-                "25V/5 ÄÆ°á»ng BÃ¬nh HÃ²a 22, PhÆ°á»ng BÃ¬nh HÃ²a, TP. Thuáº­n An, Tá»‰nh BÃ¬nh DÆ°Æ¡ng, Viá»‡t Nam.",
-                "30/8 ÄÆ°á»ng sá»‘ 38, PhÆ°á»ng VÄ©nh PhÃº, TP. Thuáº­n An, Tá»‰nh BÃ¬nh DÆ°Æ¡ng, Viá»‡t Nam."
+                "25V/5 Đường Bình Hòa 22, Phường Bình Hòa, TP. Thuận An, Tỉnh Bình Dương, Việt Nam.",
+                "30/8 Đường số 38, Phường Vĩnh Phú, TP. Thuận An, Tỉnh Bình Dương, Việt Nam."
             ],
-            headOffice: "25V/5 ÄÆ°á»ng BÃ¬nh HÃ²a 22, PhÆ°á»ng BÃ¬nh HÃ²a, TP. Thuáº­n An, Tá»‰nh BÃ¬nh DÆ°Æ¡ng, Viá»‡t Nam.",
-            factory: "30/8 ÄÆ°á»ng sá»‘ 38, PhÆ°á»ng VÄ©nh PhÃº, TP. Thuáº­n An, Tá»‰nh BÃ¬nh DÆ°Æ¡ng, Viá»‡t Nam.",
+            headOffice: "25V/5 Đường Bình Hòa 22, Phường Bình Hòa, TP. Thuận An, Tỉnh Bình Dương, Việt Nam.",
+            factory: "30/8 Đường số 38, Phường Vĩnh Phú, TP. Thuận An, Tỉnh Bình Dương, Việt Nam.",
             mapUrl: "https://maps.google.com/maps?q=Maintech+Vietnam+%C4%90%E1%BB%93ng+Nai&output=embed&z=15"
         },
         quickChannels: {
@@ -55,12 +55,12 @@ export default function ContactPage() {
         },
         form: {
             enabled: true,
-            title: { vi: "Gá»­i yÃªu cáº§u tÆ° váº¥n", en: "Request a consultation" },
-            subtitle: { vi: "Cam káº¿t pháº£n há»“i ká»¹ thuáº­t trong vÃ²ng 24 giá» lÃ m viá»‡c.", en: "We commit to responding within 24 business hours." },
-            submitText: { vi: "Gá»­i thÃ´ng tin ngay", en: "Send request" },
+            title: { vi: "Gửi yêu cầu tư vấn", en: "Request a consultation" },
+            subtitle: { vi: "Cam kết phản hồi kỹ thuật trong vòng 24 giờ làm việc.", en: "We commit to responding within 24 business hours." },
+            submitText: { vi: "Gửi thông tin ngay", en: "Send request" },
             receiverEmail: "",
             successMessage: {
-                vi: "YÃªu cáº§u Ä‘Ã£ Ä‘Æ°á»£c gá»­i! ChÃºng tÃ´i sáº½ liÃªn há»‡ láº¡i sá»›m nháº¥t.",
+                vi: "Yêu cầu đã được gửi! Chúng tôi sẽ liên hệ lại sớm nhất.",
                 en: "Your request has been sent. We will contact you soon."
             }
         }

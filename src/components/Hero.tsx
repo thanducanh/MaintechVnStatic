@@ -39,21 +39,21 @@ export default function Hero({ config }: { config?: any }) {
 
     const title2 = hasConfig 
         ? (isVN ? config.hero.title2_vi : config.hero.title2_en)
-        : "Công nghiệp hiện đại";
+        : "Công nghiệp Hiện đại";
 
     const description = hasConfig 
         ? (isVN ? config.hero.desc_vi : config.hero.desc_en)
-        : "MAINTECHVN - Đối tác tin cậy trong cung cấp thiết bị, giải pháp kỹ thuật và dịch vụ bảo trì cho các ngành công nghiệp.";
+        : "MAINTECHVN - Đối tác tin cậy trong cung cấp thiết bị, giải pháp kỹ thuật và dịch vụ bảo trì cho các ngành công nghiệp tại Việt Nam và các khu vực Đông Nam Á.";
 
     const btn1Text = hasConfig 
         ? (isVN ? config.hero.btn1_text_vi : config.hero.btn1_text_en)
-        : t("hero.explore");
+        : "LIÊN HỆ NGAY";
 
-    const btn1Link = hasConfig ? config.hero.btn1_link : "";
+    const btn1Link = hasConfig ? config.hero.btn1_link : "/contact";
 
     const btn2Text = hasConfig 
         ? (isVN ? config.hero.btn2_text_vi : config.hero.btn2_text_en)
-        : t("nav.about");
+        : "VỀ CHÚNG TÔI";
 
     const btn2Link = hasConfig ? (config.hero.btn2_link || "/about") : "/about";
 
@@ -94,15 +94,15 @@ export default function Hero({ config }: { config?: any }) {
     const safeTitle1 =
       typeof title1 === "string" && title1.trim().length > 0
         ? title1
-        : "KỸ THUẬT CHUYÊN BIỆT";
+        : "Nâng tầm hiệu suất";
 
     const safeTitle2 =
       typeof title2 === "string" && title2.trim().length > 0
         ? title2
-        : "HIỆU SUẤT TỐI ƯU";
+        : "Công nghiệp Hiện đại";
 
     return (
-        <section className="relative flex h-screen min-h-[750px] flex-col items-center justify-center overflow-hidden bg-[#0B0F19]">
+        <section className="relative flex h-[calc(100vh-96px)] md:h-[calc(100vh-104px)] min-h-[600px] md:min-h-[700px] flex-col items-center justify-center overflow-hidden bg-[#0B0F19]">
 
             {/* 🚀 BACKGROUND LAYER */}
             <div className="absolute inset-0 z-0">
@@ -129,19 +129,17 @@ export default function Hero({ config }: { config?: any }) {
                                 onPause={() => setIsPlaying(false)}
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
-                            {/* Premium left-to-right gradient overlay matching PageBanner style for maximum readability & aesthetic balance */}
+                            {/* Premium overlay matching requested rgba(3, 13, 29, 0.62) */}
                             <div 
                                 className="absolute inset-0 transition-all duration-500 z-10 pointer-events-none" 
-                                style={{
-                                    background: `linear-gradient(to bottom, rgba(2,6,23,${Math.min(0.96, overlayOpacity * 1.45)}) 0%, rgba(2,6,23,${Math.min(0.86, overlayOpacity * 0.95)}) 100%)`,
-                                }}
+                                style={{ background: `rgba(3, 13, 29, ${overlayOpacity})` }}
                             />
                         </motion.div>
                     ) : sliderImages.length > 0 ? (
                         <AnimatePresence mode="sync">
                             <motion.div key={sliderImages[activeSlide]} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1.2 }} className="absolute inset-0">
-                                <Image src={sliderImages[activeSlide]} alt="Maintech Industrial" fill priority={activeSlide === 0} className="object-cover" />
-                                <div className="absolute inset-0 transition-all duration-500 z-10 pointer-events-none" style={{ background: `linear-gradient(to bottom, rgba(2,6,23,${Math.min(0.96, overlayOpacity * 1.45)}) 0%, rgba(2,6,23,${Math.min(0.86, overlayOpacity * 0.95)}) 100%)` }} />
+                                <Image src={sliderImages[activeSlide]} alt="Maintech Industrial" fill priority={activeSlide === 0} loading={activeSlide === 0 ? "eager" : "lazy"} sizes="100vw" className="object-cover" />
+                                <div className="absolute inset-0 transition-all duration-500 z-10 pointer-events-none" style={{ background: `rgba(3, 13, 29, ${overlayOpacity})` }} />
                             </motion.div>
                         </AnimatePresence>
                     ) : bgImageToUse ? (
@@ -157,14 +155,14 @@ export default function Hero({ config }: { config?: any }) {
                                 alt="Maintech Global"
                                 fill
                                 priority
+                                loading="eager"
+                                sizes="100vw"
                                 className="object-cover"
                             />
-                            {/* Premium left-to-right gradient overlay matching PageBanner style for maximum readability & aesthetic balance */}
+                            {/* Premium overlay matching requested rgba(3, 13, 29, 0.62) */}
                             <div 
                                 className="absolute inset-0 transition-all duration-500 z-10 pointer-events-none" 
-                                style={{
-                                    background: `linear-gradient(to bottom, rgba(2,6,23,${Math.min(0.96, overlayOpacity * 1.45)}) 0%, rgba(2,6,23,${Math.min(0.86, overlayOpacity * 0.95)}) 100%)`,
-                                }}
+                                style={{ background: `rgba(3, 13, 29, ${overlayOpacity})` }}
                             />
                         </motion.div>
                     ) : (

@@ -13,12 +13,22 @@ export const siteConfig = {
 
   home: {
     hero: {
-      badge: "MAINTECH INDUSTRIAL SOLUTIONS",
-      title1: "KỸ THUẬT CHUYÊN BIỆT",
-      title2: "HIỆU SUẤT TỐI ƯU",
-      description:
-        "MAINTECHVN - Đối tác tin cậy trong cung cấp thiết bị, giải pháp kỹ thuật và dịch vụ bảo trì cho các ngành công nghiệp tại Việt Nam.",
-      backgroundImage: "/images/maintech-page-banner.png",
+      badge_vi: "GIẢI PHÁP CÔNG NGHIỆP MAINTECH",
+      badge_en: "MAINTECH INDUSTRIAL SOLUTIONS",
+      title1_vi: "Nâng tầm hiệu suất",
+      title1_en: "Elevating Performance",
+      title2_vi: "Công nghiệp Hiện đại",
+      title2_en: "Modern Industry",
+      desc_vi: "MAINTECHVN - Đối tác tin cậy trong cung cấp thiết bị, giải pháp kỹ thuật và dịch vụ bảo trì cho các ngành công nghiệp tại Việt Nam và các khu vực Đông Nam Á.",
+      desc_en: "MAINTECHVN - A reliable partner in providing equipment, technical solutions, and maintenance services for industries in Vietnam and Southeast Asia.",
+      backgroundImage: "/images/maintech-page-banner.webp",
+      overlayOpacity: 0.62,
+      btn1_text_vi: "LIÊN HỆ NGAY",
+      btn1_text_en: "CONTACT NOW",
+      btn1_link: "/contact",
+      btn2_text_vi: "VỀ CHÚNG TÔI",
+      btn2_text_en: "ABOUT US",
+      btn2_link: "/about"
     },
   },
 

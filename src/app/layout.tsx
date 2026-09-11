@@ -1,6 +1,6 @@
 // 📍 File: src/app/layout.tsx
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Inter, Pacifico, Roboto, Playfair_Display, Oswald, Bangers, Great_Vibes, Be_Vietnam_Pro, Space_Grotesk } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -25,20 +25,6 @@ const interFont = Inter({
     variable: "--font-inter",
     display: "swap",
 });
-
-const vintageFont = Pacifico({
-    subsets: ["latin"],
-    weight: "400",
-    variable: "--font-vintage",
-    display: "swap",
-});
-const robotoFont = Roboto({ subsets: ["vietnamese", "latin"], weight: ["400", "500", "700"], variable: "--font-roboto" });
-const playfairFont = Playfair_Display({ subsets: ["vietnamese", "latin"], variable: "--font-playfair" });
-const oswaldFont = Oswald({ subsets: ["vietnamese", "latin"], variable: "--font-oswald" });
-const bangersFont = Bangers({ subsets: ["latin"], weight: "400", variable: "--font-bangers" });
-const greatVibesFont = Great_Vibes({ subsets: ["latin"], weight: "400", variable: "--font-great-vibes" });
-const beVietnamFont = Be_Vietnam_Pro({ subsets: ["vietnamese", "latin"], weight: ["400", "500", "700"], variable: "--font-be-vietnam" });
-const spaceGroteskFont = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://maintechvn.com"),
@@ -125,13 +111,13 @@ import { siteConfig } from "@/data/site-content";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="vi" className={`${mainFont.variable} ${interFont.variable} ${vintageFont.variable} ${robotoFont.variable} ${playfairFont.variable} ${oswaldFont.variable} ${bangersFont.variable} ${greatVibesFont.variable} ${beVietnamFont.variable} ${spaceGroteskFont.variable}`} suppressHydrationWarning>
+        <html lang="vi" className={`${mainFont.variable} ${interFont.variable}`} suppressHydrationWarning>
             <head>
                 {/* Preconnect để tăng tốc tải font và tài nguyên */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             </head>
-            <body className="w-full min-h-screen overflow-x-clip bg-background font-sans antialiased text-foreground">
+            <body className="w-full min-h-screen bg-background font-sans antialiased text-foreground">
                 <LanguageProvider>
                     <LanguageSelectOverlay />
                     <PublicShell

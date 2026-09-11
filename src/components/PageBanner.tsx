@@ -179,10 +179,10 @@ export default function PageBanner({
                                     <span className={`${isAbout ? "text-white text-sm md:text-base font-semibold" : "text-white text-[12px] font-medium"} uppercase tracking-[0.2em]`}>{data?.badge}</span>
                                 </div>
                             )}
-                            <h1 className={`whitespace-nowrap ${isCentered ? "text-3xl sm:text-4xl lg:text-5xl" : "text-3xl md:text-4xl lg:text-5xl xl:text-6xl"} mb-8 font-semibold tracking-tight leading-[1.1]`}>
+                            <h1 className={`${isCentered ? "text-3xl sm:text-4xl lg:text-5xl" : "text-3xl md:text-4xl lg:text-5xl xl:text-6xl"} mb-8 font-semibold tracking-tight leading-[1.1] break-words`}>
                                 {false && titleTop && <span className="text-white block mb-2">{titleTop}</span>}
                                 {isCentered ? (
-                                    <span className="block w-max max-w-none whitespace-nowrap text-white">
+                                    <span className="block text-white break-words">
                                         {titleHighlight.split(/(maintech)/gi).map((part, index) =>
                                             part.toLowerCase() === "maintech" ? <span key={index} className="text-[#C8102E]">{part}</span> : part
                                         )}

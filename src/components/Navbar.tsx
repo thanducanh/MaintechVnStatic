@@ -169,11 +169,27 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
         : `https://t.me/${telegramValue || "maintechvn"}`;
 
     return (
-        <nav className="sticky top-0 z-[9999] isolate self-start w-full border-b border-slate-200 bg-white shadow-sm">
+        <nav className="sticky top-0 z-[9999] isolate w-full border-b border-slate-200 bg-white shadow-sm">
             <div className="topbar-compact relative z-20 block h-8 overflow-visible bg-[#0a0f1d] text-[11px] text-slate-300 sm:h-10 sm:text-xs">
                 <div className="grid h-full w-full grid-cols-[minmax(0,1fr)_auto] items-stretch bg-[#0a0f1d]">
-                    <div className="flex h-full w-full min-w-0 items-center justify-start gap-3 bg-[#0a0f1d] px-4 py-0 sm:gap-5 sm:px-6 xl:px-[150px]"><a href={`mailto:${topbarInfo.email}`} className="flex shrink-0 items-center justify-center gap-2 hover:text-white"><Mail size={14} /> <span className="hidden sm:inline">{topbarInfo.email}</span></a><a href={`tel:${topbarInfo.hotline.replace(/[^\d+]/g, "")}`} className="flex shrink-0 items-center justify-center gap-2 hover:text-white"><Phone size={14} /> <span className="hidden sm:inline">{topbarInfo.hotline}</span></a>{fullAddress && <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`} title={fullAddress} target="_blank" rel="noopener noreferrer" className="hidden min-w-0 max-w-[280px] items-center gap-2 whitespace-nowrap transition-colors duration-200 hover:text-red-300 hover:underline cursor-pointer md:flex"><MapPin size={14} className="shrink-0" /><span className="topbar-marquee min-w-max">{safeAddress}</span></a>}</div>
-                    <div className="ml-auto flex h-full w-full min-w-0 items-center justify-end gap-3 bg-[#C8102E] px-3 py-0 text-xs font-semibold text-white [clip-path:polygon(18px_0,100%_0,100%_100%,0_100%)] sm:gap-4 sm:px-6 sm:text-sm xl:px-[150px]"><button onClick={toggleLanguage} className="flex shrink-0 items-center justify-center gap-1 border-r border-white/30 pr-2 font-bold sm:pr-4"><Globe size={14} />{language === "VN" ? "Tiếng Việt" : "English"}<ChevronDown size={12} /></button>
+                    <div className="flex h-full w-full min-w-0 items-center justify-start gap-4 bg-[#0a0f1d] px-4 py-0 sm:gap-5 sm:px-6 xl:px-[150px]">
+                        <a href={`mailto:${topbarInfo.email}`} className="flex shrink-0 items-center justify-center gap-2 hover:text-white">
+                            <Mail size={14} /> 
+                            <span className="hidden sm:inline">{topbarInfo.email}</span>
+                        </a>
+                        <a href={`tel:${topbarInfo.hotline.replace(/[^\d+]/g, "")}`} className="flex shrink-0 items-center justify-center gap-1.5 hover:text-white font-medium">
+                            <Phone size={14} /> 
+                            <span>{topbarInfo.hotline}</span>
+                        </a>
+                        {fullAddress && <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`} title={fullAddress} target="_blank" rel="noopener noreferrer" className="hidden min-w-0 max-w-[280px] items-center gap-2 whitespace-nowrap transition-colors duration-200 hover:text-red-300 hover:underline cursor-pointer md:flex"><MapPin size={14} className="shrink-0" /><span className="topbar-marquee min-w-max">{safeAddress}</span></a>}
+                    </div>
+                    <div className="ml-auto flex h-full w-full min-w-0 items-center justify-end gap-3 bg-[#C8102E] px-4 py-0 text-xs font-semibold text-white [clip-path:polygon(14px_0,100%_0,100%_100%,0_100%)] sm:gap-4 sm:px-6 sm:text-sm xl:px-[150px]">
+                        <button onClick={toggleLanguage} className="flex shrink-0 items-center justify-center gap-1 sm:border-r sm:border-white/30 sm:pr-4 font-bold">
+                            <Globe size={14} />
+                            <span className="sm:hidden">{language === "VN" ? "VN" : "EN"}</span>
+                            <span className="hidden sm:inline">{language === "VN" ? "Tiếng Việt" : "English"}</span>
+                            <ChevronDown size={12} />
+                        </button>
                         <span className="hidden items-center gap-3 sm:flex"><a href={zaloHref} target="_blank" rel="noopener noreferrer" aria-label="Zalo" title="Zalo" className="text-sm font-black hover:text-white">Z</a><span className="h-5 w-px bg-white/30" /></span>
                         <span className="hidden items-center gap-3 sm:flex"><a href={whatsappHref} target={whatsappHref.startsWith("tel:") ? undefined : "_blank"} rel={whatsappHref.startsWith("tel:") ? undefined : "noopener noreferrer"} aria-label="WhatsApp" title="WhatsApp" className="hover:text-white"><MessageCircle size={17} /></a><span className="h-5 w-px bg-white/30" /></span>
                         <a href={telegramHref} target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" className="hidden hover:text-white sm:block">
@@ -366,16 +382,48 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
                                 );
                             })}
 
-                            <div className="mx-5 mt-2 flex items-center justify-between border-t border-white/20 px-0 py-4">
-                                <span className="text-[12px] text-white/60">Ngôn ngữ</span>
+                            <div className="mx-5 mt-4 border-t border-white/20 pt-5 pb-2 space-y-4 text-[13px] text-white/80">
+                                <a href={`mailto:${topbarInfo.email}`} className="flex items-center gap-3 hover:text-white transition-colors">
+                                    <Mail size={15} className="shrink-0 text-white/60" />
+                                    <span className="truncate">{topbarInfo.email}</span>
+                                </a>
+                                <a href={`tel:${topbarInfo.hotline.replace(/[^\d+]/g, "")}`} className="flex items-center gap-3 hover:text-white transition-colors font-medium">
+                                    <Phone size={15} className="shrink-0 text-white/60" />
+                                    <span>{topbarInfo.hotline}</span>
+                                </a>
+                                {fullAddress && (
+                                    <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:text-white transition-colors">
+                                        <MapPin size={15} className="shrink-0 text-white/60 mt-0.5" />
+                                        <span className="leading-snug">{fullAddress}</span>
+                                    </a>
+                                )}
+                            </div>
+
+                            <div className="mx-5 mt-2 flex items-center gap-4 py-3 text-white/90">
+                                <a href={zaloHref} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-[#C8102E] transition-colors font-black text-[13px]">Z</a>
+                                <a href={whatsappHref} target={whatsappHref.startsWith("tel:") ? undefined : "_blank"} rel={whatsappHref.startsWith("tel:") ? undefined : "noopener noreferrer"} className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-[#C8102E] transition-colors"><MessageCircle size={16} /></a>
+                                <a href={telegramHref} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-[#C8102E] transition-colors"><Send size={14} className="mr-0.5" /></a>
+                            </div>
+
+                            <div className="mx-5 mt-4 flex items-center justify-between border-t border-white/20 px-0 py-4 mb-2">
+                                <span className="text-[12px] text-white/60">Ngôn ngữ (Language)</span>
                                 <button
                                     onClick={toggleLanguage}
-                                    className="flex items-center gap-1.5 text-[12px] font-medium text-white/70 hover:text-white transition-colors outline-none"
+                                    className="flex items-center gap-1.5 text-[13px] font-bold text-white hover:text-[#C8102E] transition-colors outline-none"
                                 >
-                                    <Globe size={13} />
+                                    <Globe size={14} />
                                     {language === "VN" ? "Tiếng Việt" : "English"}
                                 </button>
                             </div>
+
+                            {!isLoggedIn && (
+                                <div className="px-5 pb-8">
+                                    <Link href="/admin" className="flex w-full items-center justify-center gap-2 rounded-md bg-white/10 py-3 text-[13px] font-bold uppercase tracking-wider text-white/90 hover:bg-[#C8102E] hover:text-white transition-colors">
+                                        <User size={15} />
+                                        Đăng nhập CMS
+                                    </Link>
+                                </div>
+                            )}
 
                             {isLoggedIn && (
                                 <>

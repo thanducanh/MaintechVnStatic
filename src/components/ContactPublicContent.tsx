@@ -10,6 +10,8 @@ import {
 import { useLanguage } from "@/context/LanguageContext";
 import toast from "react-hot-toast";
 
+import { submitContactForm } from "@/actions/contact";
+
 export default function ContactPublicContent({ data }: { data: any }) {
     const { language, t } = useLanguage();
     const isVN = language === "VN";
@@ -22,14 +24,22 @@ export default function ContactPublicContent({ data }: { data: any }) {
         setIsSubmitting(true);
         const form = e.target as HTMLFormElement;
         
-        // Simulating the action locally via mailto
-        const email = data.contactInfo?.emails?.[0] || "mtv@maintechvn.com.vn";
-        window.location.href = `mailto:${email}?subject=Liên hệ từ website`;
-        
-        setIsSubmitting(false);
-        setIsSuccess(true);
-        form.reset();
-        setTimeout(() => setIsSuccess(false), 5000);
+        try {
+            const formData = new FormData(form);
+            const res = await submitContactForm(formData);
+            
+            if (res.error) {
+                toast.error(res.error);
+            } else {
+                setIsSuccess(true);
+                form.reset();
+                setTimeout(() => setIsSuccess(false), 5000);
+            }
+        } catch (error) {
+            toast.error(isVN ? "Có lỗi xảy ra, vui lòng thử lại!" : "An error occurred, please try again!");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleCallClick = () => {
@@ -180,15 +190,24 @@ export default function ContactPublicContent({ data }: { data: any }) {
                                 <div>
                                     <input 
                                         type="text" 
+                                        name="company"
+                                        required
+                                        placeholder={isVN ? "Tên công ty *" : "Company Name *"} 
+                                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 focus:border-[#C8102E] focus:ring-1 focus:ring-[#C8102E] outline-none transition-all placeholder:text-slate-400 text-slate-700"
+                                    />
+                                </div>
+                                <div>
+                                    <input 
+                                        type="text" 
                                         name="phone"
                                         required
                                         placeholder={isVN ? "Số điện thoại *" : "Phone Number *"} 
                                         className="w-full px-5 py-4 bg-slate-50 border border-slate-200 focus:border-[#C8102E] focus:ring-1 focus:ring-[#C8102E] outline-none transition-all placeholder:text-slate-400 text-slate-700"
                                     />
                                 </div>
-                                <div>
-                                    <select name="service_interest" className="w-full px-5 py-4 bg-slate-50 border border-slate-200 focus:border-[#C8102E] focus:ring-1 focus:ring-[#C8102E] outline-none transition-all text-slate-500 appearance-none">
-                                        <option value="">{isVN ? "Dịch vụ quan tâm" : "Services"}</option>
+                                <div className="md:col-span-2">
+                                    <select name="service_interest" required className="w-full px-5 py-4 bg-slate-50 border border-slate-200 focus:border-[#C8102E] focus:ring-1 focus:ring-[#C8102E] outline-none transition-all text-slate-500 appearance-none">
+                                        <option value="">{isVN ? "Dịch vụ quan tâm *" : "Services *"}</option>
                                         <option value="Bảo trì & Sửa chữa">{isVN ? "Bảo trì & Sửa chữa" : "Maintenance & Repair"}</option>
                                         <option value="Cung cấp phụ tùng">{isVN ? "Cung cấp phụ tùng" : "Spare Parts"}</option>
                                         <option value="Giải pháp tự động hóa">{isVN ? "Giải pháp tự động hóa" : "Automation Solutions"}</option>
@@ -199,7 +218,7 @@ export default function ContactPublicContent({ data }: { data: any }) {
                                         name="message"
                                         rows={5}
                                         required
-                                        placeholder={isVN ? "Nội dung tin nhắn..." : "Message..."} 
+                                        placeholder={isVN ? "Nội dung tin nhắn... *" : "Message... *"} 
                                         className="w-full px-5 py-4 bg-slate-50 border border-slate-200 focus:border-[#C8102E] focus:ring-1 focus:ring-[#C8102E] outline-none transition-all placeholder:text-slate-400 text-slate-700 resize-none"
                                     ></textarea>
                                 </div>
