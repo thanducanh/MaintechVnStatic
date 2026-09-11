@@ -4,12 +4,13 @@ import { useState } from "react";
 import { login } from "@/actions/auth";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-import { Mail, Lock, LogIn } from "lucide-react";
+import { Mail, Lock, LogIn, Eye, EyeOff } from "lucide-react";
 import Image from "next/image";
 
 export default function LoginPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -60,7 +61,6 @@ export default function LoginPage() {
                   name="email" 
                   type="email" 
                   required 
-                  defaultValue="admin@maintechvn.com"
                   placeholder="Nhập email quản trị..."
                   className="w-full rounded-xl border border-slate-300 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-900 outline-none transition-all focus:border-[#C8102E] focus:bg-white focus:ring-2 focus:ring-[#C8102E]/20"
                 />
@@ -75,12 +75,18 @@ export default function LoginPage() {
                 </div>
                 <input 
                   name="password" 
-                  type="password" 
+                  type={showPassword ? "text" : "password"} 
                   required 
-                  defaultValue="Admin@123456"
                   placeholder="Nhập mật khẩu..."
-                  className="w-full rounded-xl border border-slate-300 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-900 outline-none transition-all focus:border-[#C8102E] focus:bg-white focus:ring-2 focus:ring-[#C8102E]/20"
+                  className="w-full rounded-xl border border-slate-300 bg-slate-50 py-3 pl-10 pr-10 text-sm text-slate-900 outline-none transition-all focus:border-[#C8102E] focus:bg-white focus:ring-2 focus:ring-[#C8102E]/20"
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-slate-600 transition-colors"
+                >
+                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
               </div>
             </div>
 

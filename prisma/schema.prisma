@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -16,11 +16,11 @@ model AdminUser {
 }
 
 model ContactMessage {
-  id        Int      @id @default(autoincrement())
-  name      String
-  phone     String
-  email     String?
-  company   String?
+  id           Int      @id @default(autoincrement())
+  name         String
+  phone        String
+  email        String?
+  company      String?
   message      String
   status       String   @default("Mới")
   reminderSent Boolean  @default(false)
