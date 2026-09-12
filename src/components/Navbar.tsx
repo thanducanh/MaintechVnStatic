@@ -228,7 +228,7 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
                         <div className="flex items-baseline select-none text-lg font-bold tracking-tight [font-family:var(--font-montserrat)] md:text-xl">
                             <span className="text-[#C8102E]">MAIN</span>
                             <span className="text-[#00A3FF]">TECH</span>
-                            <span className="ml-1 text-slate-900">VIET NAM</span>
+                            <span className="ml-1 text-slate-900">VIETNAM</span>
                         </div>
                     </div>
                 </Link>
