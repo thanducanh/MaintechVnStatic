@@ -70,6 +70,12 @@ export default function LoginPage() {
             <div>
               <label className="mb-1.5 block text-sm font-semibold text-slate-700">Mật khẩu</label>
               <div className="relative">
+                <style dangerouslySetInnerHTML={{__html: `
+                  input[type="password"]::-ms-reveal,
+                  input[type="password"]::-ms-clear {
+                    display: none;
+                  }
+                `}} />
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
                   <Lock size={18} />
                 </div>
