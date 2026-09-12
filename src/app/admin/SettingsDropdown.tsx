@@ -2,20 +2,23 @@
 
 import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { KeyRound, X, Settings, LogOut } from "lucide-react";
+import { KeyRound, X, Settings, LogOut, Info, Database, Server, Users, MessageSquare } from "lucide-react";
 import { changePassword, logout } from "@/actions/auth";
+import { getSystemInfo } from "@/actions/system";
 import toast from "react-hot-toast";
 
 export function SettingsDropdown() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
+  const [isSystemModalOpen, setIsSystemModalOpen] = useState(false);
+  const [systemData, setSystemData] = useState<any>(null);
+  
   const [mounted, setMounted] = useState(false);
   const [loading, setLoading] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
-    
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsDropdownOpen(false);
@@ -34,13 +37,24 @@ export function SettingsDropdown() {
       toast.error(res.error);
     } else {
       toast.success("Đổi mật khẩu thành công!");
-      setIsModalOpen(false);
+      setIsPasswordModalOpen(false);
     }
   }
 
   const openPasswordModal = () => {
     setIsDropdownOpen(false);
-    setIsModalOpen(true);
+    setIsPasswordModalOpen(true);
+  };
+
+  const openSystemModal = async () => {
+    setIsDropdownOpen(false);
+    setIsSystemModalOpen(true);
+    const res = await getSystemInfo();
+    if (res.success) {
+      setSystemData(res.data);
+    } else {
+      toast.error("Không thể lấy thông tin hệ thống");
+    }
   };
 
   return (
@@ -54,14 +68,23 @@ export function SettingsDropdown() {
       </button>
 
       {isDropdownOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden z-50 py-1">
+        <div className="absolute right-0 mt-2 w-52 bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden z-50 py-1">
+          <button 
+            onClick={openSystemModal}
+            className="w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 flex items-center gap-2"
+          >
+            <Info size={16} className="text-blue-500" />
+            Thông tin hệ thống
+          </button>
+          
           <button 
             onClick={openPasswordModal}
             className="w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 flex items-center gap-2"
           >
-            <KeyRound size={16} className="text-slate-500" />
+            <KeyRound size={16} className="text-amber-500" />
             Đổi mật khẩu
           </button>
+          
           <div className="h-px bg-slate-100 my-1"></div>
           <form action={logout}>
             <button 
@@ -75,12 +98,13 @@ export function SettingsDropdown() {
         </div>
       )}
 
-      {mounted && isModalOpen && createPortal(
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={() => setIsModalOpen(false)}>
+      {/* Password Modal */}
+      {mounted && isPasswordModalOpen && createPortal(
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={() => setIsPasswordModalOpen(false)}>
           <div className="bg-white rounded-xl shadow-xl w-full max-w-sm overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center px-6 py-4 border-b">
               <h3 className="text-lg font-bold text-slate-800">Đổi mật khẩu</h3>
-              <button onClick={() => setIsModalOpen(false)} className="text-slate-400 hover:text-slate-600">
+              <button onClick={() => setIsPasswordModalOpen(false)} className="text-slate-400 hover:text-slate-600">
                 <X size={20} />
               </button>
             </div>
@@ -111,7 +135,7 @@ export function SettingsDropdown() {
               <div className="mt-6 flex justify-end gap-3">
                 <button 
                   type="button" 
-                  onClick={() => setIsModalOpen(false)} 
+                  onClick={() => setIsPasswordModalOpen(false)} 
                   className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg font-medium transition-colors text-sm"
                 >
                   Hủy
@@ -125,6 +149,85 @@ export function SettingsDropdown() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>,
+        document.body
+      )}
+
+      {/* System Info Modal */}
+      {mounted && isSystemModalOpen && createPortal(
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={() => setIsSystemModalOpen(false)}>
+          <div className="bg-white rounded-xl shadow-xl w-full max-w-md overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center px-6 py-4 border-b">
+              <h3 className="text-lg font-bold text-slate-800 flex items-center gap-2">
+                <Server size={20} className="text-indigo-600" />
+                Thông tin hệ thống
+              </h3>
+              <button onClick={() => setIsSystemModalOpen(false)} className="text-slate-400 hover:text-slate-600">
+                <X size={20} />
+              </button>
+            </div>
+            
+            <div className="p-6 bg-slate-50">
+              {!systemData ? (
+                <div className="flex justify-center py-8">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+                </div>
+              ) : (
+                <div className="space-y-5">
+                  <div className="bg-white p-4 rounded-lg border shadow-sm">
+                    <h4 className="text-sm font-semibold text-slate-500 uppercase mb-3 border-b pb-2">Môi trường & Cấu hình</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-slate-600">Môi trường:</span>
+                        <span className="font-medium text-slate-900 capitalize">{systemData.environment}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-slate-600">Next.js Version:</span>
+                        <span className="font-medium text-slate-900">{systemData.nextVersion}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-slate-600">Node.js Version:</span>
+                        <span className="font-medium text-slate-900">{systemData.nodeVersion}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg border shadow-sm">
+                    <h4 className="text-sm font-semibold text-slate-500 uppercase mb-3 border-b pb-2 flex items-center gap-2">
+                      <Database size={16} /> Cơ sở dữ liệu
+                    </h4>
+                    <div className="space-y-3">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-slate-600">Loại DB:</span>
+                        <span className="font-medium text-blue-700 bg-blue-50 px-2 py-0.5 rounded">{systemData.database}</span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-3 mt-2">
+                        <div className="bg-slate-50 rounded p-3 border flex flex-col items-center justify-center">
+                          <MessageSquare size={20} className="text-amber-500 mb-1" />
+                          <span className="text-2xl font-bold text-slate-800">{systemData.stats.contacts}</span>
+                          <span className="text-xs text-slate-500">Tin nhắn</span>
+                        </div>
+                        <div className="bg-slate-50 rounded p-3 border flex flex-col items-center justify-center">
+                          <Users size={20} className="text-emerald-500 mb-1" />
+                          <span className="text-2xl font-bold text-slate-800">{systemData.stats.visitors}</span>
+                          <span className="text-xs text-slate-500">Lượt truy cập</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+            
+            <div className="px-6 py-4 border-t bg-white flex justify-end">
+              <button 
+                onClick={() => setIsSystemModalOpen(false)} 
+                className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg font-medium transition-colors text-sm"
+              >
+                Đóng
+              </button>
+            </div>
           </div>
         </div>,
         document.body
