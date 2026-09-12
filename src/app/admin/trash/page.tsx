@@ -1,7 +1,7 @@
-import { getSession, logout } from "@/actions/auth";
+import { getSession } from "@/actions/auth";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
-import { LogOut, Globe, ArrowLeft, AlertCircle } from "lucide-react";
+import { Globe, ArrowLeft, AlertCircle } from "lucide-react";
 import Link from "next/link";
 import { MessageRow } from "../MessageRow";
 import { SettingsDropdown } from "../SettingsDropdown";
@@ -55,6 +55,15 @@ export default async function TrashPage() {
 
       <main className="flex-1 overflow-y-auto p-6">
         <div className="mx-auto max-w-6xl space-y-6">
+          
+          <div className="flex items-center justify-between">
+            <Link 
+              href="/admin" 
+              className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors bg-white px-4 py-2 rounded-lg border shadow-sm hover:shadow"
+            >
+              <ArrowLeft size={16} /> Quay lại danh sách
+            </Link>
+          </div>
           
           <div className="bg-amber-50 border border-amber-200 text-amber-800 px-4 py-3 rounded-lg flex items-start gap-3">
             <AlertCircle className="shrink-0 mt-0.5" size={20} />
