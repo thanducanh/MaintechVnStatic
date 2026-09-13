@@ -177,8 +177,14 @@ export function SettingsDropdown() {
                 <div className="space-y-5">
                   {/* Môi trường & cấu hình */}
                   <div className="bg-white p-4 rounded-lg border shadow-sm">
-                    <h4 className="text-sm font-semibold text-slate-500 uppercase mb-3 border-b pb-2">Môi trường & Cấu hình</h4>
+                    <h4 className="text-sm font-semibold text-slate-500 uppercase mb-3 border-b pb-2 flex items-center gap-2">
+                      <Server size={16} /> Môi trường & cấu hình
+                    </h4>
                     <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-slate-600">Máy chủ (Hosting):</span>
+                        <span className="font-medium text-slate-900">{systemData.vercelStatus === "Local" ? "Local" : "Vercel (Production)"}</span>
+                      </div>
                       <div className="flex justify-between">
                         <span className="text-slate-600">Môi trường:</span>
                         <span className="font-medium text-slate-900 capitalize">{systemData.environment}</span>
@@ -190,23 +196,6 @@ export function SettingsDropdown() {
                       <div className="flex justify-between">
                         <span className="text-slate-600">Node.js Version:</span>
                         <span className="font-medium text-slate-900">{systemData.nodeVersion}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Kết nối hệ thống */}
-                  <div className="bg-white p-4 rounded-lg border shadow-sm">
-                    <h4 className="text-sm font-semibold text-slate-500 uppercase mb-3 border-b pb-2 flex items-center gap-2">
-                      <LinkIcon size={16} /> Kết nối hệ thống
-                    </h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-slate-600">Vercel:</span>
-                        <span className="font-medium text-slate-900">{systemData.vercelStatus}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-slate-600">GitHub Repo:</span>
-                        <span className="font-medium text-slate-900">{systemData.githubRepo}</span>
                       </div>
                     </div>
                   </div>
