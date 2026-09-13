@@ -257,19 +257,19 @@ export function SettingsDropdown() {
                         <div className="flex justify-between text-sm mb-1">
                           <span className="text-slate-600">Đã dùng:</span>
                           <span className="font-medium text-slate-900">
-                            {systemData.dbSizeMb.toFixed(2)} MB / {systemData.dbLimitMb} MB
+                            {(systemData.dbSizeMb || 0).toFixed(2)} MB / {systemData.dbLimitMb || 500} MB
                           </span>
                         </div>
                         <div className="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden border">
                           <div 
                             className={`h-2.5 rounded-full transition-all duration-500 ${
-                              systemData.dbPercent >= 90 ? "bg-red-500" : systemData.dbPercent >= 70 ? "bg-amber-400" : "bg-emerald-500"
+                              (systemData.dbPercent || 0) >= 90 ? "bg-red-500" : (systemData.dbPercent || 0) >= 70 ? "bg-amber-400" : "bg-emerald-500"
                             }`} 
-                            style={{ width: `${Math.min(systemData.dbPercent, 100)}%` }}
+                            style={{ width: `${Math.min(systemData.dbPercent || 0, 100)}%` }}
                           ></div>
                         </div>
                         <div className="text-right text-xs text-slate-500 font-medium">
-                          {systemData.dbPercent.toFixed(1)}%
+                          {(systemData.dbPercent || 0).toFixed(1)}%
                         </div>
                       </div>
                     )}
