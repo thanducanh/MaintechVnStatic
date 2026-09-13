@@ -4,22 +4,24 @@ import { useState } from "react";
 import { login } from "@/actions/auth";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-import { User, Lock, LogIn, Eye, EyeOff } from "lucide-react";
+import { User, Lock, LogIn, Eye, EyeOff, AlertCircle } from "lucide-react";
 import Image from "next/image";
 
 export default function LoginPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
+    setErrorMsg("");
     const formData = new FormData(e.currentTarget);
     const res = await login(formData);
     
     if (res.error) {
-      toast.error(res.error);
+      setErrorMsg(res.error);
       setLoading(false);
     } else {
       toast.success("Đăng nhập thành công!");
@@ -51,6 +53,13 @@ export default function LoginPage() {
 
         <div className="p-8">
           <form onSubmit={handleSubmit} className="space-y-5">
+            {errorMsg && (
+              <div className="flex items-center gap-2 rounded-xl bg-red-50 p-3.5 text-sm text-red-600 border border-red-200 animate-in fade-in slide-in-from-top-1">
+                <AlertCircle size={18} className="shrink-0" />
+                <span className="font-medium">{errorMsg}</span>
+              </div>
+            )}
+            
             <div>
               <label className="mb-1.5 block text-sm font-semibold text-slate-700">Tên đăng nhập</label>
               <div className="relative">
