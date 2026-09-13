@@ -416,34 +416,6 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
                                 </button>
                             </div>
 
-                            {!isLoggedIn && (
-                                <div className="px-5 pb-8">
-                                    <Link href="/admin" className="flex w-full items-center justify-center gap-2 rounded-md bg-white/10 py-3 text-[13px] font-bold uppercase tracking-wider text-white/90 hover:bg-[#C8102E] hover:text-white transition-colors">
-                                        <User size={15} />
-                                        Đăng nhập CMS
-                                    </Link>
-                                </div>
-                            )}
-
-                            {isLoggedIn && (
-                                <>
-                                    <div className="mx-5 h-px bg-white/20" />
-                                    <Link
-                                        href="/admin"
-                                        className="flex items-center gap-2.5 px-5 py-4 text-[13px] font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors"
-                                    >
-                                        <LayoutDashboard size={14} />
-                                        Quản trị hệ thống
-                                    </Link>
-                                    <button
-                                        onClick={handleLogout}
-                                        className="w-full text-left flex items-center gap-2.5 px-5 py-4 text-[13px] font-medium text-red-300 hover:bg-white/10 transition-colors"
-                                    >
-                                        <LogOut size={14} />
-                                        Đăng xuất
-                                    </button>
-                                </>
-                            )}
                         </motion.div>
                     </motion.div>
                 )}
