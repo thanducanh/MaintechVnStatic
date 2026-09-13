@@ -80,7 +80,7 @@ export async function login(formData: FormData) {
     return { success: true };
   } catch (err: any) {
     console.error("Login Error:", err);
-    return { error: err.message === "Database Timeout" ? "Kết nối đến cơ sở dữ liệu thất bại (Timeout). Kiểm tra DATABASE_URL trên Vercel." : "Có lỗi xảy ra, vui lòng thử lại sau." };
+    return { error: `[Lỗi Hệ Thống]: ${err.message || 'Không rõ nguyên nhân'}` };
   }
 }
 
