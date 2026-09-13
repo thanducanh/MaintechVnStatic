@@ -24,7 +24,6 @@ export default function LoginPage() {
       setErrorMsg(res.error);
       setLoading(false);
     } else {
-      toast.success("Đăng nhập thành công!");
       router.push("/admin");
       router.refresh();
     }
