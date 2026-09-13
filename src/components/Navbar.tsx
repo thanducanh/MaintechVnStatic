@@ -87,6 +87,7 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
     }, []);
 
     useEffect(() => {
+        setIsLoggedIn(false);
         window.addEventListener("scroll", handleScroll, { passive: true });
 
         if (initialHomepageConfig) {
@@ -139,27 +140,10 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
         setIsMobileMenuOpen(false);
     }, [pathname]);
 
-    const handleLogout = useCallback(async () => {
+    const handleLogout = useCallback(() => {
         setIsLoggedIn(false);
         setIsUserDropdownOpen(false);
-        const { logout } = await import("@/actions/auth");
-        await logout();
-        window.location.href = "/admin/login";
-    }, []);
-
-    useEffect(() => {
-        const checkAuth = async () => {
-            try {
-                const { getSession } = await import("@/actions/auth");
-                const session = await getSession();
-                if (session && session.user) {
-                    setIsLoggedIn(true);
-                }
-            } catch (e) {
-                // ignore
-            }
-        };
-        checkAuth();
+        window.location.href = "/login";
     }, []);
 
     const toggleLanguage = useCallback(() => {
@@ -211,6 +195,8 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
                         <a href={telegramHref} target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" className="hidden hover:text-white sm:block">
                             <Send size={15} className="mr-0.5" />
                         </a>
+                        <span className="ml-1 hidden h-5 border-l border-white/40 pl-3 sm:block" aria-hidden="true" />
+                        <Link href="/admin" aria-label="CMS Admin" title="CMS Admin" className="hidden shrink-0 transition-colors hover:text-white/70 sm:block"><User size={17} /></Link>
                     </div>
                 </div>
             </div>
@@ -430,6 +416,15 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
                                 </button>
                             </div>
 
+                            {!isLoggedIn && (
+                                <div className="px-5 pb-8">
+                                    <Link href="/admin" className="flex w-full items-center justify-center gap-2 rounded-md bg-white/10 py-3 text-[13px] font-bold uppercase tracking-wider text-white/90 hover:bg-[#C8102E] hover:text-white transition-colors">
+                                        <User size={15} />
+                                        Đăng nhập CMS
+                                    </Link>
+                                </div>
+                            )}
+
                             {isLoggedIn && (
                                 <>
                                     <div className="mx-5 h-px bg-white/20" />
@@ -449,7 +444,6 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
                                     </button>
                                 </>
                             )}
-
                         </motion.div>
                     </motion.div>
                 )}
