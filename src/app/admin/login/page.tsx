@@ -69,7 +69,7 @@ export default function LoginPage() {
                   name="username" 
                   type="text" 
                   required 
-                  placeholder="Nhập tên đăng nhập (VD: admin)..."
+                  placeholder="Nhập tên đăng nhập"
                   className="w-full rounded-xl border border-slate-300 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-900 outline-none transition-all focus:border-[#C8102E] focus:bg-white focus:ring-2 focus:ring-[#C8102E]/20"
                 />
               </div>
@@ -91,7 +91,7 @@ export default function LoginPage() {
                   name="password" 
                   type={showPassword ? "text" : "password"} 
                   required 
-                  placeholder="Nhập mật khẩu..."
+                  placeholder="Nhập mật khẩu"
                   className="w-full rounded-xl border border-slate-300 bg-slate-50 py-3 pl-10 pr-10 text-sm text-slate-900 outline-none transition-all focus:border-[#C8102E] focus:bg-white focus:ring-2 focus:ring-[#C8102E]/20"
                 />
                 <button
