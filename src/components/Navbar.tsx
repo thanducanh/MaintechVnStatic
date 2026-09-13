@@ -87,7 +87,6 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
     }, []);
 
     useEffect(() => {
-        setIsLoggedIn(false);
         window.addEventListener("scroll", handleScroll, { passive: true });
 
         if (initialHomepageConfig) {
@@ -140,10 +139,27 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
         setIsMobileMenuOpen(false);
     }, [pathname]);
 
-    const handleLogout = useCallback(() => {
+    const handleLogout = useCallback(async () => {
         setIsLoggedIn(false);
         setIsUserDropdownOpen(false);
-        window.location.href = "/login";
+        const { logout } = await import("@/actions/auth");
+        await logout();
+        window.location.href = "/admin/login";
+    }, []);
+
+    useEffect(() => {
+        const checkAuth = async () => {
+            try {
+                const { getSession } = await import("@/actions/auth");
+                const session = await getSession();
+                if (session && session.user) {
+                    setIsLoggedIn(true);
+                }
+            } catch (e) {
+                // ignore
+            }
+        };
+        checkAuth();
     }, []);
 
     const toggleLanguage = useCallback(() => {
@@ -413,6 +429,26 @@ export default function Navbar({ initialSiteLogo, initialHomepageConfig }: { ini
                                     {language === "VN" ? "Tiếng Việt" : "English"}
                                 </button>
                             </div>
+
+                            {isLoggedIn && (
+                                <>
+                                    <div className="mx-5 h-px bg-white/20" />
+                                    <Link
+                                        href="/admin"
+                                        className="flex items-center gap-2.5 px-5 py-4 text-[13px] font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+                                    >
+                                        <LayoutDashboard size={14} />
+                                        Quản trị hệ thống
+                                    </Link>
+                                    <button
+                                        onClick={handleLogout}
+                                        className="w-full text-left flex items-center gap-2.5 px-5 py-4 text-[13px] font-medium text-red-300 hover:bg-white/10 transition-colors"
+                                    >
+                                        <LogOut size={14} />
+                                        Đăng xuất
+                                    </button>
+                                </>
+                            )}
 
                         </motion.div>
                     </motion.div>
