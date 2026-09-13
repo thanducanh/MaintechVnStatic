@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { KeyRound, X, Settings, LogOut, Info, Database, Server, Users, MessageSquare } from "lucide-react";
+import { KeyRound, X, Settings, LogOut, Info, Database, Server, Users, MessageSquare, HardDrive, Link as LinkIcon, Github } from "lucide-react";
 import { changePassword, logout } from "@/actions/auth";
 import { getSystemInfo } from "@/actions/system";
 import toast from "react-hot-toast";
@@ -168,13 +168,14 @@ export function SettingsDropdown() {
               </button>
             </div>
             
-            <div className="p-6 bg-slate-50">
+            <div className="p-6 bg-slate-50 max-h-[75vh] overflow-y-auto">
               {!systemData ? (
                 <div className="flex justify-center py-8">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
                 </div>
               ) : (
                 <div className="space-y-5">
+                  {/* Môi trường & cấu hình */}
                   <div className="bg-white p-4 rounded-lg border shadow-sm">
                     <h4 className="text-sm font-semibold text-slate-500 uppercase mb-3 border-b pb-2">Môi trường & Cấu hình</h4>
                     <div className="space-y-2 text-sm">
@@ -193,6 +194,24 @@ export function SettingsDropdown() {
                     </div>
                   </div>
 
+                  {/* Kết nối hệ thống */}
+                  <div className="bg-white p-4 rounded-lg border shadow-sm">
+                    <h4 className="text-sm font-semibold text-slate-500 uppercase mb-3 border-b pb-2 flex items-center gap-2">
+                      <LinkIcon size={16} /> Kết nối hệ thống
+                    </h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-slate-600">Vercel:</span>
+                        <span className="font-medium text-slate-900">{systemData.vercelStatus}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-slate-600">GitHub Repo:</span>
+                        <span className="font-medium text-slate-900">{systemData.githubRepo}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Cơ sở dữ liệu */}
                   <div className="bg-white p-4 rounded-lg border shadow-sm">
                     <h4 className="text-sm font-semibold text-slate-500 uppercase mb-3 border-b pb-2 flex items-center gap-2">
                       <Database size={16} /> Cơ sở dữ liệu
@@ -202,6 +221,12 @@ export function SettingsDropdown() {
                         <span className="text-slate-600">Loại DB:</span>
                         <span className="font-medium text-blue-700 bg-blue-50 px-2 py-0.5 rounded">{systemData.database}</span>
                       </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-slate-600">Trạng thái (Supabase):</span>
+                        <span className={`font-medium ${systemData.dbConnected ? "text-emerald-600" : "text-red-600"}`}>
+                          {systemData.dbConnected ? "Đang kết nối" : "Mất kết nối"}
+                        </span>
+                      </div>
                       <div className="grid grid-cols-2 gap-3 mt-2">
                         <div className="bg-slate-50 rounded p-3 border flex flex-col items-center justify-center">
                           <MessageSquare size={20} className="text-amber-500 mb-1" />
@@ -209,13 +234,47 @@ export function SettingsDropdown() {
                           <span className="text-xs text-slate-500">Tin nhắn</span>
                         </div>
                         <div className="bg-slate-50 rounded p-3 border flex flex-col items-center justify-center">
-                          <Users size={20} className="text-emerald-500 mb-1" />
-                          <span className="text-2xl font-bold text-slate-800">{systemData.stats.visitors}</span>
-                          <span className="text-xs text-slate-500">Lượt truy cập</span>
+                          <Users size={20} className="text-indigo-500 mb-1" />
+                          <span className="text-2xl font-bold text-slate-800">{systemData.stats.admins}</span>
+                          <span className="text-xs text-slate-500">Tài khoản</span>
                         </div>
                       </div>
                     </div>
                   </div>
+
+                  {/* Dung lượng database */}
+                  <div className="bg-white p-4 rounded-lg border shadow-sm">
+                    <h4 className="text-sm font-semibold text-slate-500 uppercase mb-3 border-b pb-2 flex items-center gap-2">
+                      <HardDrive size={16} /> Dung lượng database
+                    </h4>
+                    {systemData.sizeError ? (
+                       <div className="text-sm text-red-500 flex justify-between">
+                         <span className="text-slate-600">Trạng thái:</span>
+                         <span className="font-medium">Không thể kiểm tra</span>
+                       </div>
+                    ) : (
+                      <div className="space-y-2 mt-3">
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-slate-600">Đã dùng:</span>
+                          <span className="font-medium text-slate-900">
+                            {systemData.dbSizeMb.toFixed(2)} MB / {systemData.dbLimitMb} MB
+                          </span>
+                        </div>
+                        <div className="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden border">
+                          <div 
+                            className={`h-2.5 rounded-full transition-all duration-500 ${
+                              systemData.dbPercent >= 90 ? "bg-red-500" : systemData.dbPercent >= 70 ? "bg-amber-400" : "bg-emerald-500"
+                            }`} 
+                            style={{ width: `${Math.min(systemData.dbPercent, 100)}%` }}
+                          ></div>
+                        </div>
+                        <div className="text-right text-xs text-slate-500 font-medium">
+                          {systemData.dbPercent.toFixed(1)}%
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
                 </div>
               )}
             </div>
