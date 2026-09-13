@@ -14,10 +14,12 @@ const withTimeout = <T>(promise: Promise<T>, ms: number) => {
 
 export async function login(formData: FormData) {
   try {
-    const username = formData.get("username") as string;
+    const rawUsername = formData.get("username") as string;
     const password = formData.get("password") as string;
 
-    if (!username || !password) return { error: "Vui lòng nhập đầy đủ thông tin" };
+    if (!rawUsername || !password) return { error: "Vui lòng nhập đầy đủ thông tin" };
+
+    const username = rawUsername.trim().toLowerCase();
 
     let user = await withTimeout(
       prisma.adminUser.findUnique({ where: { username: username } }),
@@ -75,9 +77,11 @@ export async function changePassword(formData: FormData) {
 
     const oldPassword = formData.get("oldPassword") as string;
     const newPassword = formData.get("newPassword") as string;
-    const newUsername = formData.get("newUsername") as string;
+    const rawNewUsername = formData.get("newUsername") as string;
 
-    if (!oldPassword || !newPassword || !newUsername) return { error: "Vui lòng nhập đủ thông tin" };
+    if (!oldPassword || !newPassword || !rawNewUsername) return { error: "Vui lòng nhập đủ thông tin" };
+
+    const newUsername = rawNewUsername.trim().toLowerCase();
 
     const user = await prisma.adminUser.findUnique({ where: { id: sessionData.user.id } });
     if (!user) return { error: "Không tìm thấy tài khoản" };
