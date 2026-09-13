@@ -119,6 +119,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </head>
             <body className="w-full min-h-screen bg-background font-sans antialiased text-foreground">
                 <LanguageProvider>
+                    <Toaster position="top-right" />
                     <LanguageSelectOverlay />
                     <PublicShell
                         siteLogo={siteConfig.logo}
