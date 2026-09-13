@@ -4,7 +4,7 @@ import { useState } from "react";
 import { login } from "@/actions/auth";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-import { Mail, Lock, LogIn, Eye, EyeOff } from "lucide-react";
+import { User, Lock, LogIn, Eye, EyeOff } from "lucide-react";
 import Image from "next/image";
 
 export default function LoginPage() {
@@ -52,16 +52,16 @@ export default function LoginPage() {
         <div className="p-8">
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-slate-700">Email (Tài khoản)</label>
+              <label className="mb-1.5 block text-sm font-semibold text-slate-700">Tên đăng nhập</label>
               <div className="relative">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-                  <Mail size={18} />
+                  <User size={18} />
                 </div>
                 <input 
-                  name="email" 
-                  type="email" 
+                  name="username" 
+                  type="text" 
                   required 
-                  placeholder="Nhập email quản trị..."
+                  placeholder="Nhập tên đăng nhập (VD: admin)..."
                   className="w-full rounded-xl border border-slate-300 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-900 outline-none transition-all focus:border-[#C8102E] focus:bg-white focus:ring-2 focus:ring-[#C8102E]/20"
                 />
               </div>

@@ -4,7 +4,6 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 
-// Helper for timeout
 const withTimeout = <T>(promise: Promise<T>, ms: number) => {
   let timeoutId: NodeJS.Timeout;
   const timeoutPromise = new Promise<never>((_, reject) => {
@@ -15,18 +14,18 @@ const withTimeout = <T>(promise: Promise<T>, ms: number) => {
 
 export async function login(formData: FormData) {
   try {
-    const email = formData.get("email") as string;
+    const username = formData.get("username") as string;
     const password = formData.get("password") as string;
 
-    if (email !== "admin@maintechvn.com") return { error: "Sai tài khoản" };
+    if (!username || !password) return { error: "Vui lòng nhập đầy đủ thông tin" };
 
-    // With a 10s timeout to prevent infinite loading if DB is unreachable
     let user = await withTimeout(
-      prisma.adminUser.findUnique({ where: { username: "admin" } }),
+      prisma.adminUser.findUnique({ where: { username: username } }),
       10000
     );
 
-    if (!user) {
+    // Auto-create initial admin if it doesn't exist and they type "admin"
+    if (!user && username === "admin") {
       if (password !== "Admin@123456") return { error: "Sai mật khẩu" };
       const hash = await bcrypt.hash("Admin@123456", 10);
       user = await withTimeout(
@@ -35,6 +34,8 @@ export async function login(formData: FormData) {
         }),
         10000
       );
+    } else if (!user) {
+      return { error: "Sai tên đăng nhập" };
     } else {
       const isMatch = await bcrypt.compare(password, user.passwordHash);
       if (!isMatch) return { error: "Sai mật khẩu" };
@@ -74,23 +75,30 @@ export async function changePassword(formData: FormData) {
 
     const oldPassword = formData.get("oldPassword") as string;
     const newPassword = formData.get("newPassword") as string;
+    const newUsername = formData.get("newUsername") as string;
 
-    if (!oldPassword || !newPassword) return { error: "Vui lòng nhập đủ thông tin" };
+    if (!oldPassword || !newPassword || !newUsername) return { error: "Vui lòng nhập đủ thông tin" };
 
-    const user = await prisma.adminUser.findUnique({ where: { username: "admin" } });
+    const user = await prisma.adminUser.findUnique({ where: { id: sessionData.user.id } });
     if (!user) return { error: "Không tìm thấy tài khoản" };
 
     const isMatch = await bcrypt.compare(oldPassword, user.passwordHash);
     if (!isMatch) return { error: "Mật khẩu cũ không chính xác" };
 
+    // Check if the new username is already taken by someone else (not the current user)
+    if (newUsername !== user.username) {
+       const existingUser = await prisma.adminUser.findUnique({ where: { username: newUsername } });
+       if (existingUser) return { error: "Tên đăng nhập này đã được sử dụng" };
+    }
+
     const hash = await bcrypt.hash(newPassword, 10);
     await prisma.adminUser.update({
-      where: { username: "admin" },
-      data: { passwordHash: hash }
+      where: { id: user.id },
+      data: { username: newUsername, passwordHash: hash }
     });
 
     return { success: true };
   } catch (err) {
-    return { error: "Lỗi hệ thống khi đổi mật khẩu" };
+    return { error: "Lỗi hệ thống khi cập nhật tài khoản" };
   }
 }

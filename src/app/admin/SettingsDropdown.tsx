@@ -36,7 +36,7 @@ export function SettingsDropdown() {
     if (res.error) {
       toast.error(res.error);
     } else {
-      toast.success("Đổi mật khẩu thành công!");
+      toast.success("Cập nhật tài khoản thành công!");
       setIsPasswordModalOpen(false);
     }
   }
@@ -82,7 +82,7 @@ export function SettingsDropdown() {
             className="w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 flex items-center gap-2"
           >
             <KeyRound size={16} className="text-amber-500" />
-            Đổi mật khẩu
+            Cập nhật tài khoản
           </button>
           
           <div className="h-px bg-slate-100 my-1"></div>
@@ -103,7 +103,7 @@ export function SettingsDropdown() {
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={() => setIsPasswordModalOpen(false)}>
           <div className="bg-white rounded-xl shadow-xl w-full max-w-sm overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center px-6 py-4 border-b">
-              <h3 className="text-lg font-bold text-slate-800">Đổi mật khẩu</h3>
+              <h3 className="text-lg font-bold text-slate-800">Cập nhật tài khoản</h3>
               <button onClick={() => setIsPasswordModalOpen(false)} className="text-slate-400 hover:text-slate-600">
                 <X size={20} />
               </button>
@@ -112,7 +112,17 @@ export function SettingsDropdown() {
             <form action={handlePasswordSubmit} className="p-6">
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Mật khẩu cũ</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Tên đăng nhập mới (Username)</label>
+                  <input 
+                    type="text" 
+                    name="newUsername"
+                    required
+                    placeholder="vd: admin"
+                    className="w-full px-3 py-2 border rounded-md outline-none focus:ring-1 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Mật khẩu cũ (để xác nhận)</label>
                   <input 
                     type="password" 
                     name="oldPassword"
@@ -145,7 +155,7 @@ export function SettingsDropdown() {
                   disabled={loading}
                   className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors text-sm disabled:opacity-50"
                 >
-                  {loading ? "Đang xử lý..." : "Lưu mật khẩu"}
+                  {loading ? "Đang xử lý..." : "Cập nhật tài khoản"}
                 </button>
               </div>
             </form>
